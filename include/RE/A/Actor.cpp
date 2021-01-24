@@ -367,6 +367,20 @@ namespace RE
 	{
 		return boolBits.all(BOOL_BITS::kPlayerTeammate);
 	}
+	
+
+	bool Actor::IsPowerAttacking() const
+	{
+		if (!this->currentProcess || !this->currentProcess->high)
+			return false;
+
+		auto attackData = this->currentProcess->high->attackData;
+
+		if (attackData)
+			return attackData->data.flags.any(RE::AttackData::AttackFlag::kPowerAttack);
+		else
+			return false;
+	}
 
 	bool Actor::IsRunning() const
 	{
@@ -390,6 +404,14 @@ namespace RE
 		}
 
 		return true;
+	}
+	
+
+	bool Actor::IsStaggering() const
+	{
+		bool result = false;
+		this->GetGraphVariableBool("IsStaggering", result);
+		return result;
 	}
 
 	bool Actor::IsSummoned() const noexcept

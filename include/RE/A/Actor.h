@@ -512,8 +512,10 @@ namespace RE
 		[[nodiscard]] constexpr bool IsInKillMove() const noexcept { return boolFlags.all(BOOL_FLAGS::kIsInKillMove); }
 		bool						 IsOnMount() const;
 		bool						 IsPlayerTeammate() const;
+		bool						 IsPowerAttacking() const;
 		bool						 IsRunning() const;
 		bool						 IsSneaking() const;
+		bool                         IsStaggering() const;
 		[[nodiscard]] bool			 IsSummoned() const noexcept;
 		bool						 IsTrespassing() const;
 		void						 RemoveExtraArrows3D();
