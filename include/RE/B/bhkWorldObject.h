@@ -26,6 +26,13 @@ namespace RE
 		// add
 		virtual void Unk_32(void);	// 32 - { return Unk_29(); }
 
+		void* GetPropertyValue(std::uint32_t a_key) const;
+		template <class T>
+		T* GetPropertyValue(std::uint32_t a_key) const
+		{
+			return static_cast<T*>(GetPropertyValue(a_key));
+		}
+
 		// members
 		hkpWorld* world;  // 20
 	};

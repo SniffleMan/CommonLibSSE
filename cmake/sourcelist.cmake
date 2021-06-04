@@ -28,6 +28,7 @@ set(sources ${sources}
 	include/RE/B/BGSSoundCategory.cpp
 	include/RE/B/BGSStoryTeller.cpp
 	include/RE/B/bhkCharProxyController.cpp
+	include/RE/B/bhkWorldObject.cpp
 	include/RE/B/BipedAnim.cpp
 	include/RE/B/BookMenu.cpp
 	include/RE/B/BSAtomic.cpp

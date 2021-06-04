@@ -8,6 +8,7 @@
 
 namespace RE
 {
+	class bhkCollisionObject;
 	class NiAlphaProperty;
 	class NiAVObject;
 	class NiCollisionObject;
@@ -113,6 +114,13 @@ namespace RE
 		void Update(NiUpdateData& a_data);
 		void UpdateBodyTint(const NiColor& a_color);
 		void UpdateHairColor(const NiColor& a_color);
+
+		bhkCollisionObject* GetCollisionObject() const
+		{
+			using func_t = decltype(&NiAVObject::GetCollisionObject);
+			REL::Relocation<func_t> func{ REL::ID(25482) };
+			return func(this);
+		}
 
 		// members
 		NiNode*								  parent;					// 030

@@ -76,7 +76,7 @@ namespace RE
 		virtual void  SetTransformImpl(const hkTransform& a_tranform) = 0;										// 05
 		virtual void  GetLinearVelocityImpl(hkVector4& a_velocity) const = 0;									// 06
 		virtual void  SetLinearVelocityImpl(const hkVector4& a_velocity) = 0;									// 07
-		virtual void  Unk_08(void) = 0;																			// 08
+		virtual void  GetCollisionFilterInfo(std::uint32_t& a_collisionFilterInfo) const = 0;					// 08
 		virtual void  Unk_09(void) = 0;																			// 09
 		virtual void  Unk_0A(void) = 0;																			// 0A
 		virtual void  Unk_0B(void) = 0;																			// 0B

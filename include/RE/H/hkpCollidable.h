@@ -6,11 +6,24 @@
 
 namespace RE
 {
+	class NiAVObject;
+
 	struct hkAabbUint32;
 
 	class hkpCollidable : public hkpCdBody
 	{
 	public:
+		enum BelongsTo : std::uint32_t
+		{
+			kTerrain = 1 << 16
+		};
+
+		enum CollisionFilterInfo : std::uint32_t
+		{
+			kBelongsTo = 0xFFFF0000,
+			kCollidesWith = 0x0000FFFF
+		};
+
 		enum class ForceCollideOntoPpuReasons
 		{
 			kUserRequest = 1 << 0,
@@ -36,6 +49,8 @@ namespace RE
 			hkpShapeKey*  childShapeKeys;			// 30
 		};
 		static_assert(sizeof(BoundingVolumeData) == 0x38);
+
+		NiAVObject* Get3D() const;
 
 		void* GetOwner() const;
 		template <class T>

@@ -18,7 +18,6 @@ namespace RE
 		}
 	}
 
-
 	void TESObjectCELL::ForEachReferenceInRange(const NiPoint3& a_origin, float a_radius, std::function<bool(TESObjectREFR&)> a_callback) const
 	{
 		ForEachReference([&](TESObjectREFR& ref) {
@@ -28,7 +27,6 @@ namespace RE
 						 true;
 		});
 	}
-
 
 	TESNPC* TESObjectCELL::GetActorOwner()
 	{

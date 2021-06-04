@@ -18,6 +18,7 @@ namespace RE
 	class GridCellArray;
 	class ImageSpaceModifierInstance;
 	class NiNode;
+	class NiPoint3;
 	class Sky;
 	class TESActorBase;
 	class TESObjectCELL;
@@ -57,6 +58,20 @@ namespace RE
 		virtual BSEventNotifyControl ProcessEvent(const PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource) override;	 // 01
 
 		static TES* GetSingleton();
+
+		TESObjectCELL* GetCell(NiPoint3* a_position) const
+		{
+			using func_t = decltype(&TES::GetCell);
+			REL::Relocation<func_t> func{ REL::ID(13177) };
+			return func(this, a_position);
+		}
+
+		std::uint32_t GetMaterialID(NiPoint3* a_position) const
+		{
+			using func_t = decltype(&TES::GetMaterialID);
+			REL::Relocation<func_t> func{ REL::ID(13203) };
+			return func(this, a_position);
+		}
 
 		// members
 		std::uint64_t										  unk070;					  // 070
