@@ -20,7 +20,7 @@ namespace RE
 		ExtraDataType GetType() const override;                             // 01 - { reutrn kSoul; }
 		bool          IsNotEqual(const BSExtraData* a_rhs) const override;  // 02 - { return soul != a_rhs->soul; }
 
-		SOUL_LEVEL GetContainedSoul() const;
+		[[nodiscard]] SOUL_LEVEL GetContainedSoul() const;
 
 		// members
 		stl::enumeration<SOUL_LEVEL, std::uint8_t> soul;   // 10

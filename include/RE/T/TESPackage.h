@@ -279,7 +279,7 @@ namespace RE
 		void          Revert(BGSLoadFormBuffer* a_buf) override;    // 12
 		void          InitItemImpl() override;                      // 13
 		std::uint32_t GetRefCount() const override;                 // 2D - { return refCount; }
-		const char*   GetObjectTypeName() const override;           // 39 - { return g_packageTypeStrings[packData.packType]; }
+		[[nodiscard]] const char*   GetObjectTypeName() const override;           // 39 - { return g_packageTypeStrings[packData.packType]; }
 
 		// add
 		virtual bool IsActorAtLocation(Actor* a_actor, bool a_arg2, float a_arg3, bool a_arg4);                      // 3B

@@ -25,7 +25,7 @@ namespace RE
 
 		virtual ~BGSEntryPointFunctionData();  // 00
 
-		virtual FunctionType GetType() const = 0;                   // 01
+		[[nodiscard]] virtual FunctionType GetType() const = 0;                   // 01
 		virtual bool         LoadFunctionData(TESFile* a_mod) = 0;  // 02
 		virtual void         ResolveForms(TESFile* a_mod);          // 03 - { return; }
 		virtual void         Unk_04(void);                          // 04 - { return; }

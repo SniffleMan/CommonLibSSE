@@ -19,7 +19,7 @@ namespace RE
 		void Unk_09(void) override;           // 09 - { return; }
 		void Unk_0A(void) override;           // 0A - { return; }
 
-		bool IsPressed(std::uint32_t a_keyCode) const;
+		[[nodiscard]] bool IsPressed(std::uint32_t a_keyCode) const;
 
 		// members
 		std::uint64_t unk070;            // 070

@@ -176,7 +176,7 @@ namespace RE
 		bool        IsParentForm() override;                                            // 34 - { return true; }
 		bool        IsFormTypeChild(FormType a_type) override;                          // 36
 
-		bool HasMaxHeightData() const;
+		[[nodiscard]] bool HasMaxHeightData() const;
 
 		// members
 		BSTHashMap<CellID, TESObjectCELL*>                            cellMap;                  // 058

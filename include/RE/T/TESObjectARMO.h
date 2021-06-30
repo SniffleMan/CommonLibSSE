@@ -60,7 +60,7 @@ namespace RE
 		void     Copy(TESForm* a_srcForm) override;            // 2F
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
 		float GetArmorRating();
 

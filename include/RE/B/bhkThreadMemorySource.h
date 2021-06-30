@@ -89,7 +89,7 @@ namespace RE
 		std::size_t   TotalSize(const void* a_pointer) const override;                               // 0B
 		void          GetHeapStats(HeapStats* a_stats, bool a_fullBlockInfo) override;               // 0C
 		bool          ShouldTrySmallBlockPools(std::size_t a_size, MEM_CONTEXT a_context) override;  // 0D
-		std::uint32_t GetPageSize() const override;                                                  // 0E
+		[[nodiscard]] std::uint32_t GetPageSize() const override;                                                  // 0E
 
 		// members
 		BSCriticalSection  lock;                    // 10

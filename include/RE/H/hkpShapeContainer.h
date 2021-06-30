@@ -16,12 +16,12 @@ namespace RE
 		virtual ~hkpShapeContainer();  // 00
 
 		// add
-		virtual std::int32_t    GetNumChildShapes() const;                                             // 01
-		virtual hkpShapeKey     GetFirstKey() const = 0;                                               // 02
-		virtual hkpShapeKey     GetNextKey(hkpShapeKey a_oldKey) const = 0;                            // 03
-		virtual std::uint32_t   GetCollisionFilterInfo(hkpShapeKey a_key) const;                       // 04 - { return 0; }
+		[[nodiscard]] virtual std::int32_t    GetNumChildShapes() const;                                             // 01
+		[[nodiscard]] virtual hkpShapeKey     GetFirstKey() const = 0;                                               // 02
+		[[nodiscard]] virtual hkpShapeKey     GetNextKey(hkpShapeKey a_oldKey) const = 0;                            // 03
+		[[nodiscard]] virtual std::uint32_t   GetCollisionFilterInfo(hkpShapeKey a_key) const;                       // 04 - { return 0; }
 		virtual const hkpShape* GetChildShape(hkpShapeKey a_key, hkpShapeBuffer& a_buffer) const = 0;  // 05
-		virtual bool            IsWeldingEnabled() const;                                              // 06 - { return true; }
+		[[nodiscard]] virtual bool            IsWeldingEnabled() const;                                              // 06 - { return true; }
 	};
 	static_assert(sizeof(hkpShapeContainer) == 0x8);
 }

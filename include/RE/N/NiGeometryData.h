@@ -73,7 +73,7 @@ namespace RE
 
 		// add
 		virtual void             SetActiveVertexCount(std::uint16_t a_count);  // 25 - { return; }
-		virtual std::uint16_t    GetActiveVertexCount() const;                 // 26 - { return vertices; }
+		[[nodiscard]] virtual std::uint16_t    GetActiveVertexCount() const;                 // 26 - { return vertices; }
 		virtual NiTriStripsData* AsTriStripsData();                            // 27 - { return 0; }
 		virtual NiTriShapeData*  AsTriShapeData();                             // 28 - { return 0; }
 		virtual void             Unk_29(void) = 0;                             // 29

@@ -23,7 +23,7 @@ namespace RE
 
 		// add
 		virtual TESRegion*              GetLastLoadedRegion();                                 // 01 - { return lastLoadedRegion; }
-		virtual TESRegionData*          ConstructRegionData(REGION_DATA_ID a_id) const;        // 02
+		[[nodiscard]] virtual TESRegionData*          ConstructRegionData(REGION_DATA_ID a_id) const;        // 02
 		virtual TESRegionDataObjects*   AsRegionDataObjects(TESRegionData* a_data) const;      // 03
 		virtual TESRegionDataWeather*   AsRegionDataWeather(TESRegionData* a_data) const;      // 04
 		virtual TESRegionDataMap*       AsRegionDataMap(TESRegionData* a_data) const;          // 05

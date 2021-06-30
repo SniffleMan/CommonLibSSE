@@ -16,7 +16,7 @@ namespace RE
 		~ExtraRegionList() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRegionList; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRegionList; }
 
 		// members
 		TESRegionList* list;  // 10

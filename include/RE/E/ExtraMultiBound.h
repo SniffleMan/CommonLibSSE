@@ -17,7 +17,7 @@ namespace RE
 		~ExtraMultiBound() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kMultiBound; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kMultiBound; }
 
 		// members
 		NiPointer<BSMultiBound> bound;  // 10

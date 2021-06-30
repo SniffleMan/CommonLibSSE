@@ -16,7 +16,7 @@ namespace RE
 		~bhkRefObject() override;  // 00
 
 		// override(NiObject)
-		const NiRTTI* GetRTTI() const override;  // 02
+		[[nodiscard]] const NiRTTI* GetRTTI() const override;  // 02
 
 		// add
 		virtual void Unk_25(void);  // 25

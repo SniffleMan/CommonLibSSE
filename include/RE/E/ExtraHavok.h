@@ -18,7 +18,7 @@ namespace RE
 		~ExtraHavok() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kHavok; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kHavok; }
 
 		// members
 		NiPointer<bhkWorld>    world;  // 10

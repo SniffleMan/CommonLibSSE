@@ -252,7 +252,7 @@ namespace RE
 		struct StringChunk : public Chunk
 		{
 		public:
-			std::string GetString() const;
+			[[nodiscard]] std::string GetString() const;
 			Chunk*      GetNext();
 
 			// members
@@ -265,7 +265,7 @@ namespace RE
 		struct IntegerChunk : public Chunk
 		{
 		public:
-			int    GetInteger() const;
+			[[nodiscard]] int    GetInteger() const;
 			Chunk* GetNext();
 
 			// members

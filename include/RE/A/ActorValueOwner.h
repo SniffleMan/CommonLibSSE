@@ -19,10 +19,10 @@ namespace RE
 		virtual void  ModActorValue(ActorValue a_akValue, float a_value);                                       // 05 - { return; }
 		virtual void  RestoreActorValue(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_akValue, float a_value);  // 06 - { return; }
 		virtual void  SetActorValue(ActorValue a_akValue, float a_value);                                       // 07 - { SetBaseActorValue(a_akValue, a_value); }
-		virtual bool  GetIsPlayerOwner() const;                                                                 // 08 - { return false; }
+		[[nodiscard]] virtual bool  GetIsPlayerOwner() const;                                                                 // 08 - { return false; }
 
-		float GetArmorRatingSkillMultiplier(float a_skillLevel) const;
-		float GetClampedActorValue(ActorValue a_akValue) const;
+		[[nodiscard]] float GetArmorRatingSkillMultiplier(float a_skillLevel) const;
+		[[nodiscard]] float GetClampedActorValue(ActorValue a_akValue) const;
 	};
 	static_assert(sizeof(ActorValueOwner) == 0x8);
 }

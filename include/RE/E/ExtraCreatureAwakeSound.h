@@ -15,7 +15,7 @@ namespace RE
 		~ExtraCreatureAwakeSound() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kCreatureAwakeSound; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kCreatureAwakeSound; }
 
 		// members
 		BSSoundHandle handle;  // 10

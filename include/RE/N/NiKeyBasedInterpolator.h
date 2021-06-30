@@ -26,13 +26,13 @@ namespace RE
 		void          GetActiveTimeRange(float& a_start, float& a_end) const override;  // 32
 
 		// add
-		virtual std::uint16_t GetKeyChannelCount() const = 0;                      // 39
-		virtual std::uint32_t GetKeyCount(std::uint16_t a_channel) const = 0;      // 3A
-		virtual KeyType       GetKeyType(std::uint16_t a_channel) const = 0;       // 3C
-		virtual KeyContent    GetKeyContent(std::uint16_t a_channel) const = 0;    // 3B
-		virtual void*         GetKeyArray(std::uint16_t a_channel) const = 0;      // 3D
-		virtual std::uint8_t  GetKeyStride(std::uint16_t a_channel) const = 0;     // 3E
-		virtual bool          GetChannelPosed(std::uint16_t a_channel) const = 0;  // 3F
+		[[nodiscard]] virtual std::uint16_t GetKeyChannelCount() const = 0;                      // 39
+		[[nodiscard]] virtual std::uint32_t GetKeyCount(std::uint16_t a_channel) const = 0;      // 3A
+		[[nodiscard]] virtual KeyType       GetKeyType(std::uint16_t a_channel) const = 0;       // 3C
+		[[nodiscard]] virtual KeyContent    GetKeyContent(std::uint16_t a_channel) const = 0;    // 3B
+		[[nodiscard]] virtual void*         GetKeyArray(std::uint16_t a_channel) const = 0;      // 3D
+		[[nodiscard]] virtual std::uint8_t  GetKeyStride(std::uint16_t a_channel) const = 0;     // 3E
+		[[nodiscard]] virtual bool          GetChannelPosed(std::uint16_t a_channel) const = 0;  // 3F
 	};
 	static_assert(sizeof(NiKeyBasedInterpolator) == 0x18);
 }

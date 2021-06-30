@@ -75,7 +75,7 @@ namespace RE
 		void        HandleRemoveItemFromContainer(TESObjectREFR* a_container) override;  // 4E
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
 		bool IgnoresNormalWeaponResistance();
 		bool IsBolt();

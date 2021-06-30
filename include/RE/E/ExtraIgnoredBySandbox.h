@@ -14,7 +14,7 @@ namespace RE
 		~ExtraIgnoredBySandbox() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kIgnoredBySandbox; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kIgnoredBySandbox; }
 	};
 	static_assert(sizeof(ExtraIgnoredBySandbox) == 0x10);
 }

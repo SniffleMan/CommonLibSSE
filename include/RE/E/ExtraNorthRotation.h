@@ -14,7 +14,7 @@ namespace RE
 		~ExtraNorthRotation() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kNorthRotation; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kNorthRotation; }
 
 		// members
 		float         northRot;  // 10

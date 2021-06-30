@@ -30,10 +30,10 @@ namespace RE
 		virtual void         DoPlay() = 0;                                      // 02
 		virtual void         DoPause() = 0;                                     // 03
 		virtual void         DoFinish(bool a_immediate, float a_fadeTime) = 0;  // 04
-		virtual float        GetDurationImpl() const = 0;                       // 05
-		virtual TrackType    GetType() const = 0;                               // 06 - CRC32 hash of class name
-		virtual bool         TestCanPlay() const;                               // 07 - { return true; }
-		virtual MUSIC_STATUS GetMusicStatus() const;                            // 08 - { return trackStatus; }
+		[[nodiscard]] virtual float        GetDurationImpl() const = 0;                       // 05
+		[[nodiscard]] virtual TrackType    GetType() const = 0;                               // 06 - CRC32 hash of class name
+		[[nodiscard]] virtual bool         TestCanPlay() const;                               // 07 - { return true; }
+		[[nodiscard]] virtual MUSIC_STATUS GetMusicStatus() const;                            // 08 - { return trackStatus; }
 		virtual void         DoSetDuckingAttenuation(std::uint16_t a_ducking);  // 09 - { return; }
 		virtual void         DoClearDucking();                                  // 0A - { return; }
 

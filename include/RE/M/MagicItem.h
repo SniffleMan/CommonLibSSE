@@ -74,34 +74,34 @@ namespace RE
 		bool HasKeyword(const BGSKeyword* a_keyword) const override;  // 04
 
 		// add
-		virtual MagicSystem::SpellType   GetSpellType() const = 0;                                     // 53
+		[[nodiscard]] virtual MagicSystem::SpellType   GetSpellType() const = 0;                                     // 53
 		virtual void                     SetCastingType(MagicSystem::CastingType a_type);              // 54 - { return; }
-		virtual MagicSystem::CastingType GetCastingType() const = 0;                                   // 55
+		[[nodiscard]] virtual MagicSystem::CastingType GetCastingType() const = 0;                                   // 55
 		virtual void                     SetDelivery(MagicSystem::Delivery a_delivery);                // 56 - { return; }
-		virtual MagicSystem::Delivery    GetDelivery() const = 0;                                      // 57
+		[[nodiscard]] virtual MagicSystem::Delivery    GetDelivery() const = 0;                                      // 57
 		virtual bool                     IsValidDelivery(MagicSystem::Delivery a_delivery);            // 58 - { return true; }
-		virtual float                    GetFixedCastDuration() const;                                 // 59 - { return 0.0; }
-		virtual float                    GetRange() const;                                             // 5A - { return 0.0; }
-		virtual bool                     IgnoresResistance() const;                                    // 5B - { return false; }
-		virtual bool                     IgnoreLOS() const;                                            // 5C - { return false; }
-		virtual bool                     IsFood() const;                                               // 5D - { return false; }
-		virtual bool                     GetNoAbsorb() const;                                          // 5E - { return false; }
-		virtual bool                     GetNoDualCastModifications() const;                           // 5F - { return false; }
+		[[nodiscard]] virtual float                    GetFixedCastDuration() const;                                 // 59 - { return 0.0; }
+		[[nodiscard]] virtual float                    GetRange() const;                                             // 5A - { return 0.0; }
+		[[nodiscard]] virtual bool                     IgnoresResistance() const;                                    // 5B - { return false; }
+		[[nodiscard]] virtual bool                     IgnoreLOS() const;                                            // 5C - { return false; }
+		[[nodiscard]] virtual bool                     IsFood() const;                                               // 5D - { return false; }
+		[[nodiscard]] virtual bool                     GetNoAbsorb() const;                                          // 5E - { return false; }
+		[[nodiscard]] virtual bool                     GetNoDualCastModifications() const;                           // 5F - { return false; }
 		virtual bool                     GetSkillUsageData(SkillUsageData& a_data) const;              // 60 - { return false; }
-		virtual bool                     IsPoison() const;                                             // 61 - { return GetSpellType() == MagicSystem::SpellType::kPoison; }
-		virtual bool                     IsMedicine() const;                                           // 62 - { return false; }
+		[[nodiscard]] virtual bool                     IsPoison() const;                                             // 61 - { return GetSpellType() == MagicSystem::SpellType::kPoison; }
+		[[nodiscard]] virtual bool                     IsMedicine() const;                                           // 62 - { return false; }
 		virtual void                     AdjustCost(float& a_cost, Actor* a_actor) const;              // 63 - { return; }
-		virtual float                    GetChargeTime() const;                                        // 64 - { return 0.0; }
-		virtual std::uint32_t            GetMaxEffectCount() const;                                    // 65 - { return 0; }
-		virtual ActorValue               GetAssociatedSkill() const;                                   // 66 - { return ActorValue::kNone; }
-		virtual bool                     IsTwoHanded() const;                                          // 67 - { return false; }
+		[[nodiscard]] virtual float                    GetChargeTime() const;                                        // 64 - { return 0.0; }
+		[[nodiscard]] virtual std::uint32_t            GetMaxEffectCount() const;                                    // 65 - { return 0; }
+		[[nodiscard]] virtual ActorValue               GetAssociatedSkill() const;                                   // 66 - { return ActorValue::kNone; }
+		[[nodiscard]] virtual bool                     IsTwoHanded() const;                                          // 67 - { return false; }
 		virtual std::uint32_t            GetChunkID() = 0;                                             // 68
 		virtual void                     CopyMagicItemData(MagicItem* a_src) = 0;                      // 69
 		virtual void                     LoadMagicItemChunk(TESFile* a_mod, std::uint32_t a_chunkID);  // 6A - { return; }
 		virtual void                     LoadChunkDataPostProcess(TESFile* a_mod);                     // 6B - { return; }
-		virtual const Data*              GetData1() const = 0;                                         // 6C
+		[[nodiscard]] virtual const Data*              GetData1() const = 0;                                         // 6C
 		virtual Data*                    GetData2() = 0;                                               // 6D
-		virtual std::uint32_t            GetDataSize() const = 0;                                      // 6E
+		[[nodiscard]] virtual std::uint32_t            GetDataSize() const = 0;                                      // 6E
 		virtual void                     InitFromChunk(TESFile* a_mod) = 0;                            // 6F
 		virtual void                     InitChunk() = 0;                                              // 70
 
@@ -109,7 +109,7 @@ namespace RE
 		float       CalculateTotalGoldValue(Actor* a_caster = nullptr) const;
 		Effect*     GetCostliestEffectItem(std::uint32_t a_arg1 = 5, bool a_arg2 = false);
 		Data*       GetData();
-		const Data* GetData() const;
+		[[nodiscard]] const Data* GetData() const;
 
 		// members
 		BSTArray<Effect*>           effects;          // 58

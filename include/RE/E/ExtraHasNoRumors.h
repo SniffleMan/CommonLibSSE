@@ -14,7 +14,7 @@ namespace RE
 		~ExtraHasNoRumors() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kHasNoRumors; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kHasNoRumors; }
 
 		// members
 		bool          noRumors;  // 10

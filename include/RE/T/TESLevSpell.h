@@ -41,7 +41,7 @@ namespace RE
 		void InitItemImpl() override;                      // 13
 
 		// override (TESLeveledList)
-		bool GetCanContainFormsOfType(FormType a_type) const override;  // 07
+		[[nodiscard]] bool GetCanContainFormsOfType(FormType a_type) const override;  // 07
 	};
 	static_assert(sizeof(TESLevSpell) == 0x58);
 }

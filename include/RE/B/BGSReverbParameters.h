@@ -57,7 +57,7 @@ namespace RE
 		float        DoGetReverbDelay() const override;      // 07 - { return data.reverbDelay * 0.001; }
 		float        DoGetDiffusion() const override;        // 08 - { return data.diffusionPct; }
 		float        DoGetDensity() const override;          // 09 - { return data.densityPct; }
-		float        DoGetHFReference() const override;      // 0A - { return data.hfReference; }
+		[[nodiscard]] float        DoGetHFReference() const override;      // 0A - { return data.hfReference; }
 
 		// members
 		ReverbParams  data;   // 28 - DATA

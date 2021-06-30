@@ -48,8 +48,8 @@ namespace RE
 		~BGSStoryManagerTreeForm() override;  // 00
 
 		// add
-		virtual std::uint32_t                            QChildCount() const;                                       // 3B - { return 0; }
-		virtual BGSStoryManagerTreeForm*                 GetChild(std::uint32_t a_idx) const;                       // 3C - { return 0; }
+		[[nodiscard]] virtual std::uint32_t                            QChildCount() const;                                       // 3B - { return 0; }
+		[[nodiscard]] virtual BGSStoryManagerTreeForm*                 GetChild(std::uint32_t a_idx) const;                       // 3C - { return 0; }
 		virtual TESCondition*                            QConditions() = 0;                                         // 3D
 		virtual BGSStoryManagerTreeVisitor::VisitControl AcceptVisitor(BGSStoryManagerTreeVisitor& a_visitor) = 0;  // 3E
 

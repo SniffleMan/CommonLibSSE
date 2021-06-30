@@ -15,7 +15,7 @@ namespace RE
 		~ExtraWeaponIdleSound() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kWeaponIdleSound; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kWeaponIdleSound; }
 
 		// members
 		BSSoundHandle handle;  // 10

@@ -13,12 +13,12 @@ namespace RE
 			bottom(a_bottom)
 		{}
 
-		T GetWidth() const
+		[[nodiscard]] T GetWidth() const
 		{
 			return right > left ? (right - left) : (left - right);
 		}
 
-		T GetHeight() const
+		[[nodiscard]] T GetHeight() const
 		{
 			return top > bottom ? (top - bottom) : (bottom - top);
 		}

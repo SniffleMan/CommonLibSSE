@@ -42,7 +42,7 @@ namespace RE
 
 		// override (TESLeveledList)
 		std::int32_t GetLevDifferenceMax() override;                            // 06 - { return iLevItemLevelDifferenceMax; }
-		bool         GetCanContainFormsOfType(FormType a_type) const override;  // 07
+		[[nodiscard]] bool         GetCanContainFormsOfType(FormType a_type) const override;  // 07
 	};
 	static_assert(sizeof(TESLevItem) == 0x58);
 }

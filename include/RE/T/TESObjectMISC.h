@@ -49,7 +49,7 @@ namespace RE
 		void InitItemImpl() override;                      // 13
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
 		// add
 		virtual void SaveImpl();                                         // 53 - { return; }

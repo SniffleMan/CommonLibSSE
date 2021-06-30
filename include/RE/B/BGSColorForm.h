@@ -37,7 +37,7 @@ namespace RE
 		void ClearData() override;           // 05
 		bool Load(TESFile* a_mod) override;  // 06
 
-		bool IsPlayable() const;
+		[[nodiscard]] bool IsPlayable() const;
 
 		// memebrs
 		Color                                 color;  // 30 - CNAM

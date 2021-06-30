@@ -36,7 +36,7 @@ namespace RE
 		void                 Stop() override;                                     // 26
 		void                 Update(float a_time) override;                       // 27
 		void                 SetTarget(NiObjectNET* a_target) override;           // 28
-		bool                 TargetIsRequiredType() const override;               // 2E
+		[[nodiscard]] bool                 TargetIsRequiredType() const override;               // 2E
 
 		// add
 		virtual void Start();  // 2F - { return; }

@@ -31,7 +31,7 @@ namespace RE
 			kSpendsFavorPoints = 1 << 14
 		};
 
-		float GetResetHours() const;
+		[[nodiscard]] float GetResetHours() const;
 
 		stl::enumeration<TOPIC_INFO_FLAGS, std::uint16_t> flags;           // 0
 		std::uint16_t                                     timeUntilReset;  // 2 - reset hours as a std::uint16_t

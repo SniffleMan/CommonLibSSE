@@ -14,7 +14,7 @@ namespace RE
 		~ExtraShouldWear() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kShouldWear; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kShouldWear; }
 
 		// members
 		std::uint64_t unk10;  // 10

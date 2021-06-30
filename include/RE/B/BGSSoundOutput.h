@@ -113,7 +113,7 @@ namespace RE
 		std::uint32_t                        DoGetSupportedInputChannels() const override;                                                     // 06 - { return 2; }
 		const BSIAttenuationCharacteristics* DoGetAttenuation() const override;                                                                // 07 - { return attenuationValues; }
 		float                                DoGetReverbSendLevel() const override;                                                            // 08 - { return data.reverbSendPct * 0.0099999998; }
-		bool                                 DoGetSupportsMonitor(std::uint32_t a_arg1) const override;                                        // 09
+		[[nodiscard]] bool                                 DoGetSupportsMonitor(std::uint32_t a_arg1) const override;                                        // 09
 
 		// members
 		Data                                  data;            // 28 - NAM1

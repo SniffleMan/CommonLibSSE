@@ -15,9 +15,9 @@ namespace RE
 
 		void               Respond(FxResponseArgsBase& a_params) const;
 		const GFxValue&    operator[](UPInt a_pos) const;
-		FxDelegateHandler* GetHandler() const;
-		GFxMovieView*      GetMovie() const;
-		std::uint32_t      GetArgCount() const;
+		[[nodiscard]] FxDelegateHandler* GetHandler() const;
+		[[nodiscard]] GFxMovieView*      GetMovie() const;
+		[[nodiscard]] std::uint32_t      GetArgCount() const;
 
 	protected:
 		// members

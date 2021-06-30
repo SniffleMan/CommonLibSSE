@@ -43,7 +43,7 @@ namespace RE
 		bool          GetDangerous() const override;                                                                                                                          // 1B - { return 0; }
 		bool          Activate(TESObjectREFR* a_targetRef, TESObjectREFR* a_activatorRef, std::uint8_t a_arg3, TESBoundObject* a_arg4, std::int32_t a_targetCount) override;  // 37
 		void          SetObjectVoiceType(BGSVoiceType* a_voiceType) override;                                                                                                 // 48 - { voiceType = a_voiceType; }
-		BGSVoiceType* GetObjectVoiceType() const override;                                                                                                                    // 49 - { return voiceType; }
+		[[nodiscard]] BGSVoiceType* GetObjectVoiceType() const override;                                                                                                                    // 49 - { return voiceType; }
 
 		// add
 		virtual bool GetReflectedByAutoWater();  // 53 - { return false; }

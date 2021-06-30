@@ -58,10 +58,10 @@ namespace RE
 			[[maybe_unused]] void*       a_ptr,
 			[[maybe_unused]] std::size_t a_size,
 			[[maybe_unused]] std::size_t a_alignment) { return false; }                              // 08
-		virtual std::size_t GetBase() const { return 0; }                                            // 09
-		virtual std::size_t GetSize() const { return 0; }                                            // 0A
-		virtual std::size_t GetFootprint() const { return 0; }                                       // 0B
-		virtual std::size_t GetUsedSpace() const { return 0; }                                       // 0C
+		[[nodiscard]] virtual std::size_t GetBase() const { return 0; }                                            // 09
+		[[nodiscard]] virtual std::size_t GetSize() const { return 0; }                                            // 0A
+		[[nodiscard]] virtual std::size_t GetFootprint() const { return 0; }                                       // 0B
+		[[nodiscard]] virtual std::size_t GetUsedSpace() const { return 0; }                                       // 0C
 		virtual void        VisitMem([[maybe_unused]] GHeapMemVisitor* a_visitor) const { return; }  // 0D
 		virtual void        VisitSegments(
 				   [[maybe_unused]] GHeapSegVisitor* a_visitor,

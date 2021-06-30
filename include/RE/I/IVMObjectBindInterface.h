@@ -17,7 +17,7 @@ namespace RE
 			virtual ~IVMObjectBindInterface();  // 00
 
 			// add
-			virtual VMHandle GetBoundHandle(const BSTSmartPointer<Object>& a_objPtr) const = 0;                                                                   // 01
+			[[nodiscard]] virtual VMHandle GetBoundHandle(const BSTSmartPointer<Object>& a_objPtr) const = 0;                                                                   // 01
 			virtual bool     TypeCanBeBound(const BSFixedString& a_className, VMHandle a_handle) = 0;                                                             // 02
 			virtual void     BindObject(BSTSmartPointer<Object>& a_objPtr, VMHandle a_handle, bool a_conditional) = 0;                                            // 03
 			virtual void     HandleLoadedBinding(BSTSmartPointer<Object>& a_objPtr, VMHandle a_handle, bool a_conditional) = 0;                                   // 04

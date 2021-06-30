@@ -16,20 +16,20 @@ namespace RE
 		public:
 			~Object();
 
-			VMHandle                     GetHandle() const;
+			[[nodiscard]] VMHandle                     GetHandle() const;
 			ObjectTypeInfo*              GetTypeInfo();
-			const ObjectTypeInfo*        GetTypeInfo() const;
+			[[nodiscard]] const ObjectTypeInfo*        GetTypeInfo() const;
 			[[nodiscard]] constexpr bool IsConstructed() const noexcept { return static_cast<bool>(constructed); }
 			[[nodiscard]] constexpr bool IsInitialized() const noexcept { return static_cast<bool>(initialized); }
 			[[nodiscard]] constexpr bool IsValid() const noexcept { return static_cast<bool>(valid); }
 
-			void* Resolve(VMTypeID a_typeID) const;
+			[[nodiscard]] void* Resolve(VMTypeID a_typeID) const;
 
 			void          IncRef();
 			std::uint32_t DecRef();
 
 			Variable*       GetProperty(const BSFixedString& a_name);
-			const Variable* GetProperty(const BSFixedString& a_name) const;
+			[[nodiscard]] const Variable* GetProperty(const BSFixedString& a_name) const;
 
 			TES_HEAP_REDEFINE_NEW();
 

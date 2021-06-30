@@ -63,19 +63,19 @@ namespace RE
 
 		static Calendar* GetSingleton();
 
-		float         GetCurrentGameTime() const;
-		float         GetDay() const;
-		std::string   GetDayName() const;
-		std::uint32_t GetDayOfWeek() const;
-		float         GetDaysPassed() const;
+		[[nodiscard]] float         GetCurrentGameTime() const;
+		[[nodiscard]] float         GetDay() const;
+		[[nodiscard]] std::string   GetDayName() const;
+		[[nodiscard]] std::uint32_t GetDayOfWeek() const;
+		[[nodiscard]] float         GetDaysPassed() const;
 		void          GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear) const;
-		float         GetHour() const;
-		float         GetHoursPassed() const;
-		std::uint32_t GetMonth() const;
-		std::string   GetMonthName() const;
-		std::tm       GetTime() const;
-		float         GetTimescale() const;
-		std::uint32_t GetYear() const;
+		[[nodiscard]] float         GetHour() const;
+		[[nodiscard]] float         GetHoursPassed() const;
+		[[nodiscard]] std::uint32_t GetMonth() const;
+		[[nodiscard]] std::string   GetMonthName() const;
+		[[nodiscard]] std::tm       GetTime() const;
+		[[nodiscard]] float         GetTimescale() const;
+		[[nodiscard]] std::uint32_t GetYear() const;
 
 		// members
 		std::uint8_t  pad01;            // 01

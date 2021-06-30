@@ -17,7 +17,7 @@ namespace RE
 		~ExtraPortal() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kPortal; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kPortal; }
 
 		// members
 		NiPointer<BSPortal> portal;  // 10

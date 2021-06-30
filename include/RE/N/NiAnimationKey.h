@@ -33,9 +33,9 @@ namespace RE
 		NiAnimationKey(float a_time);
 		~NiAnimationKey();
 
-		float           GetTime() const;
+		[[nodiscard]] float           GetTime() const;
 		void            SetTime(float a_time);
-		NiAnimationKey* GetKeyAt(std::uint32_t a_index, std::uint8_t a_keySize) const;
+		[[nodiscard]] NiAnimationKey* GetKeyAt(std::uint32_t a_index, std::uint8_t a_keySize) const;
 
 	protected:
 		// members

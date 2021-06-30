@@ -87,8 +87,8 @@ namespace RE
 
 		// add
 		virtual void          CopyFromTemplateForms(TESActorBase** a_templateForms);  // 04 - { return; }
-		virtual bool          GetIsGhost() const;                                     // 05 - { return (flags >> 29) & 1; }
-		virtual bool          GetInvulnerable() const;                                // 06 - { test flags, 80000000h; }
+		[[nodiscard]] virtual bool          GetIsGhost() const;                                     // 05 - { return (flags >> 29) & 1; }
+		[[nodiscard]] virtual bool          GetInvulnerable() const;                                // 06 - { test flags, 80000000h; }
 		virtual void          Unk_07(void);                                           // 07 - { return 1; }
 		virtual BGSVoiceType* GetVoiceType(void);                                     // 08 - { return voice; }
 

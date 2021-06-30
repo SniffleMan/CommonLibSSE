@@ -16,7 +16,7 @@ namespace RE
 		~BGSMusicTrack() override;  // 00
 
 		// override (BSIMusicTrack)
-		bool TestCanPlay() const override;  // 07 - { return conditions ? conditions->Run(g_thePlayer, g_thePlayer) : true; }
+		[[nodiscard]] bool TestCanPlay() const override;  // 07 - { return conditions ? conditions->Run(g_thePlayer, g_thePlayer) : true; }
 
 		// add
 		virtual void InitItem(TESForm* a_form);  // 0B

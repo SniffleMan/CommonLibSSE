@@ -25,7 +25,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		// add
-		virtual const char*          GetModel() const;               // 04 - { return model.c_str(); }
+		[[nodiscard]] virtual const char*          GetModel() const;               // 04 - { return model.c_str(); }
 		virtual void                 SetModel(const char* a_model);  // 05 - { model = a_model; }
 		virtual TESModelTextureSwap* GetAsModelTextureSwap();        // 06 - { return 0; }
 

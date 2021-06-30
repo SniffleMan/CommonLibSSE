@@ -28,8 +28,8 @@ namespace RE
 		void         SetPerk(BGSPerk* a_perk) override;          // 06 - { perk = a_perk; }
 		BGSPerk*     GetPerk() override;                         // 07 - { return perk; }
 
-		bool ReplacesDefault() const;
-		bool RunsImmediately() const;
+		[[nodiscard]] bool ReplacesDefault() const;
+		[[nodiscard]] bool RunsImmediately() const;
 
 		// members
 		BSFixedString                          label;         // 08

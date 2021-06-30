@@ -83,24 +83,24 @@ namespace RE
 		static_assert(sizeof(ResourceVisitor) == 0x8);
 
 		// add
-		virtual std::uint32_t          GetVersion() const = 0;                                                                                         // 04
-		virtual std::uint32_t          GetLoadingFrame() const = 0;                                                                                    // 05
-		virtual float                  GetWidth() const = 0;                                                                                           // 06
-		virtual float                  GetHeight() const = 0;                                                                                          // 07
-		virtual std::uint32_t          GetFrameCount() const = 0;                                                                                      // 08
-		virtual float                  GetFrameRate() const = 0;                                                                                       // 09
-		virtual GRectF                 GetFrameRect() const = 0;                                                                                       // 0A
-		virtual std::uint32_t          GetSWFFlags() const = 0;                                                                                        // 0B
-		virtual const char*            GetFileURL() const = 0;                                                                                         // 0C
+		[[nodiscard]] virtual std::uint32_t          GetVersion() const = 0;                                                                                         // 04
+		[[nodiscard]] virtual std::uint32_t          GetLoadingFrame() const = 0;                                                                                    // 05
+		[[nodiscard]] virtual float                  GetWidth() const = 0;                                                                                           // 06
+		[[nodiscard]] virtual float                  GetHeight() const = 0;                                                                                          // 07
+		[[nodiscard]] virtual std::uint32_t          GetFrameCount() const = 0;                                                                                      // 08
+		[[nodiscard]] virtual float                  GetFrameRate() const = 0;                                                                                       // 09
+		[[nodiscard]] virtual GRectF                 GetFrameRect() const = 0;                                                                                       // 0A
+		[[nodiscard]] virtual std::uint32_t          GetSWFFlags() const = 0;                                                                                        // 0B
+		[[nodiscard]] virtual const char*            GetFileURL() const = 0;                                                                                         // 0C
 		virtual void                   WaitForLoadFinish(bool a_cancel = false) const = 0;                                                             // 0D
 		virtual void                   WaitForFrame(std::uint32_t a_frame) const = 0;                                                                  // 0E
-		virtual std::uint32_t          GetFileAttributes() const = 0;                                                                                  // 0F
+		[[nodiscard]] virtual std::uint32_t          GetFileAttributes() const = 0;                                                                                  // 0F
 		virtual std::uint32_t          GetMetadata(char* a_buff, std::uint32_t a_buffSize) const = 0;                                                  // 10
-		virtual GMemoryHeap*           GetLoadDataHeap() const = 0;                                                                                    // 11
-		virtual GMemoryHeap*           GetBindDataHeap() const = 0;                                                                                    // 12
-		virtual GMemoryHeap*           GetImageHeap() const = 0;                                                                                       // 13
-		virtual GFxResource*           GetMovieDataResource() const = 0;                                                                               // 14
-		virtual const GFxExporterInfo* GetExporterInfo() const = 0;                                                                                    // 15
+		[[nodiscard]] virtual GMemoryHeap*           GetLoadDataHeap() const = 0;                                                                                    // 11
+		[[nodiscard]] virtual GMemoryHeap*           GetBindDataHeap() const = 0;                                                                                    // 12
+		[[nodiscard]] virtual GMemoryHeap*           GetImageHeap() const = 0;                                                                                       // 13
+		[[nodiscard]] virtual GFxResource*           GetMovieDataResource() const = 0;                                                                               // 14
+		[[nodiscard]] virtual const GFxExporterInfo* GetExporterInfo() const = 0;                                                                                    // 15
 		virtual MemoryContext*         CreateMemoryContext(const char* a_heapName, const MemoryParams& a_memParams, bool a_debugHeap) = 0;             // 16
 		virtual GFxMovieView*          CreateInstance(const MemoryParams& a_memParams, bool a_initFirstFrame = true) = 0;                              // 17
 		virtual GFxMovieView*          CreateInstance(MemoryContext* a_memContext, bool a_initFirstFrame = true) = 0;                                  // 18

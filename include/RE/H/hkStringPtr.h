@@ -9,13 +9,13 @@ namespace RE
 		using size_type = std::int32_t;
 
 		// members access
-		const char* data() const noexcept;
-		const char* c_str() const noexcept;
+		[[nodiscard]] const char* data() const noexcept;
+		[[nodiscard]] const char* c_str() const noexcept;
 
 		// capacity
 		[[nodiscard]] bool empty() const noexcept;
-		size_type          size() const;
-		size_type          length() const;
+		[[nodiscard]] size_type          size() const;
+		[[nodiscard]] size_type          length() const;
 
 	protected:
 		enum

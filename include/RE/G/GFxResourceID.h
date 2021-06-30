@@ -51,9 +51,9 @@ namespace RE
 		bool           operator==(std::uint32_t a_idVal) const;
 		bool           operator!=(std::uint32_t a_idVal) const;
 
-		std::uint32_t   GetIDValue() const;
-		std::uint32_t   GetIDIndex() const;
-		IDTypes::IDType GetIDType() const;
+		[[nodiscard]] std::uint32_t   GetIDValue() const;
+		[[nodiscard]] std::uint32_t   GetIDIndex() const;
+		[[nodiscard]] IDTypes::IDType GetIDType() const;
 		GFxResourceID   GenerateNextID();
 
 	protected:

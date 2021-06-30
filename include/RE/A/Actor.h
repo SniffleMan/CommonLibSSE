@@ -85,7 +85,7 @@ namespace RE
 			T*            entries;      // 08
 
 		private:
-			T* GetAt(char a_actorValue) const
+			[[nodiscard]] T* GetAt(char a_actorValue) const
 			{
 				auto akVals = actorValues.data();
 				if (akVals && entries) {

@@ -21,7 +21,7 @@ namespace RE
 		// add
 		virtual std::uint32_t GetMaxAllowedSize();                     // 04 - { return 0; }
 		virtual const char*   GetAsNormalFile(BSString& a_out) const;  // 05
-		virtual const char*   GetDefaultPath() const;                  // 06 - { return "Textures\\"; }
+		[[nodiscard]] virtual const char*   GetDefaultPath() const;                  // 06 - { return "Textures\\"; }
 
 		// members
 		BSFixedString textureName;  // 08 - ICON

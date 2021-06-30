@@ -39,15 +39,15 @@ namespace RE
 		};
 
 		// add
-		virtual GFxMovieDef*  GetMovieDef() const;                                                                                                                                                                 // 01 - pure - Obtains the movie definition that created this instance.
-		virtual std::uint32_t GetCurrentFrame() const;                                                                                                                                                             // 02 - pure - Obtains the currently active frame of the movie, starting with 0.
-		virtual bool          HasLooped() const;                                                                                                                                                                   // 03 - pure - Determines whether the movie clip has looped past its last frame.
+		[[nodiscard]] virtual GFxMovieDef*  GetMovieDef() const;                                                                                                                                                                 // 01 - pure - Obtains the movie definition that created this instance.
+		[[nodiscard]] virtual std::uint32_t GetCurrentFrame() const;                                                                                                                                                             // 02 - pure - Obtains the currently active frame of the movie, starting with 0.
+		[[nodiscard]] virtual bool          HasLooped() const;                                                                                                                                                                   // 03 - pure - Determines whether the movie clip has looped past its last frame.
 		virtual void          GotoFrame(std::uint32_t a_frameNumber);                                                                                                                                              // 04 - pure - Moves a playhead to a specified frame.
 		virtual bool          GotoLabeledFrame(const char* a_label, std::int32_t a_offset = 0);                                                                                                                    // 05 - pure - Moves a playhead to a specified frame identified by a label.
 		virtual void          SetPlayState(PlayState a_state);                                                                                                                                                     // 06 - pure - Changes playback state of the movie, allowing animation to be paused and resumed.
-		virtual PlayState     GetPlayState() const;                                                                                                                                                                // 07 - pure - Obtains the play state of the movie clip, currently either Playing or Stopped.
+		[[nodiscard]] virtual PlayState     GetPlayState() const;                                                                                                                                                                // 07 - pure - Obtains the play state of the movie clip, currently either Playing or Stopped.
 		virtual void          SetVisible(bool a_visible);                                                                                                                                                          // 08 - pure - Sets the visibility state of a movie clip.
-		virtual bool          GetVisible() const;                                                                                                                                                                  // 09 - pure - Obtains the visibility state of a movie clip.
+		[[nodiscard]] virtual bool          GetVisible() const;                                                                                                                                                                  // 09 - pure - Obtains the visibility state of a movie clip.
 		virtual bool          IsAvailable(const char* a_pathToVar) const;                                                                                                                                          // 0A - pure - Checks for availability of a field, method, or nested clip.
 		virtual void          CreateString(GFxValue* a_value, const char* a_string);                                                                                                                               // 0B - pure - Creates strings that are managed by ActionScript runtime.
 		virtual void          CreateStringW(GFxValue* a_value, const wchar_t* a_string);                                                                                                                           // 0C - pure - Creates wide character strings that are managed by ActionScript runtime.
@@ -66,8 +66,8 @@ namespace RE
 
 		static float GetRenderPixelScale();
 
-		std::uint32_t GetFrameCount() const;
-		float         GetFrameRate() const;
+		[[nodiscard]] std::uint32_t GetFrameCount() const;
+		[[nodiscard]] float         GetFrameRate() const;
 		bool          SetVariable(const char* a_pathToVar, const char* a_value, SetVarType a_setType = SetVarType::kSticky);
 		bool          SetVariable(const char* a_pathToVar, const wchar_t* a_value, SetVarType a_setType = SetVarType::kSticky);
 		bool          SetVariableDouble(const char* a_pathToVar, double a_value, SetVarType a_setType = SetVarType::kSticky);

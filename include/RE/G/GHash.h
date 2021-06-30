@@ -58,7 +58,7 @@ namespace RE
 			hash.Clear();
 		}
 
-		inline bool IsEmpty() const
+		[[nodiscard]] inline bool IsEmpty() const
 		{
 			return hash.IsEmpty();
 		}
@@ -137,7 +137,7 @@ namespace RE
 			return ptr ? &ptr->second : nullptr;
 		}
 
-		inline UPInt GetSize() const
+		[[nodiscard]] inline UPInt GetSize() const
 		{
 			return hash.GetSize();
 		}

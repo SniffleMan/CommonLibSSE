@@ -14,7 +14,7 @@ namespace RE
 		~ExtraBadPosition() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kBadPosition; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kBadPosition; }
 	};
 	static_assert(sizeof(ExtraBadPosition) == 0x10);
 }

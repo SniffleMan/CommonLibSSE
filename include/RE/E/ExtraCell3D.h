@@ -17,7 +17,7 @@ namespace RE
 		~ExtraCell3D() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kCell3D; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kCell3D; }
 
 		// members
 		NiPointer<NiNode> cellNode;  // 10

@@ -35,19 +35,19 @@ namespace RE
 		virtual bool                Update4(float a_time, NiObjectNET* a_interpTarget, NiQuaternion& a_value);     // 28 - { return false; }
 		virtual bool                Update5(float a_time, NiObjectNET* a_interpTarget, float& a_value);            // 29 - { return false; }
 		virtual bool                Update6(float a_time, NiObjectNET* a_interpTarget, bool& a_value);             // 2A - { return false; }
-		virtual bool                IsBoolValueSupported() const;                                                  // 2B - { return false; }
-		virtual bool                IsFloatValueSupported() const;                                                 // 2C - { return false; }
-		virtual bool                IsQuaternionValueSupported() const;                                            // 2D - { return false; }
-		virtual bool                IsPoint3ValueSupported() const;                                                // 2E - { return false; }
-		virtual bool                IsColorAValueSupported() const;                                                // 2F - { return false; }
-		virtual bool                IsTransformValueSupported() const;                                             // 30 - { return false; }
+		[[nodiscard]] virtual bool                IsBoolValueSupported() const;                                                  // 2B - { return false; }
+		[[nodiscard]] virtual bool                IsFloatValueSupported() const;                                                 // 2C - { return false; }
+		[[nodiscard]] virtual bool                IsQuaternionValueSupported() const;                                            // 2D - { return false; }
+		[[nodiscard]] virtual bool                IsPoint3ValueSupported() const;                                                // 2E - { return false; }
+		[[nodiscard]] virtual bool                IsColorAValueSupported() const;                                                // 2F - { return false; }
+		[[nodiscard]] virtual bool                IsTransformValueSupported() const;                                             // 30 - { return false; }
 		virtual void                Collapse();                                                                    // 31 - { return; }
 		virtual void                GetActiveTimeRange(float& a_beginKeyTime, float& a_endKeyTime) const;          // 32 - { a_beginKeyTime = 0.0; a_endKeyTime = 0.0; }
 		virtual void                GuaranteeTimeRange(float a_startTime, float a_endTime);                        // 33 - { return; }
 		virtual NiInterpolator*     GetSequenceInterpolator(float a_startTime, float a_endTime);                   // 34
 		virtual bool                ResolveDependencies(NiAVObjectPalette* a_palette);                             // 35 - { return true; }
 		virtual bool                SetUpDependencies();                                                           // 36 - { return true; }
-		virtual bool                AlwaysUpdate() const;                                                          // 37 - { return false; }
+		[[nodiscard]] virtual bool                AlwaysUpdate() const;                                                          // 37 - { return false; }
 		virtual NiBoolInterpolator* AsNiBoolInterpolator();                                                        // 38 - { return 0; }
 
 		bool Update(float a_time, NiObjectNET* a_interpTarget, NiQuatTransform& a_value);

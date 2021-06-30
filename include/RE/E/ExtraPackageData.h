@@ -16,7 +16,7 @@ namespace RE
 		~ExtraPackageData() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kPackageData; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kPackageData; }
 
 		// members
 		ActorPackageData* actorPackageData;  // 10

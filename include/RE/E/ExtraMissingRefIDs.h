@@ -21,7 +21,7 @@ namespace RE
 		~ExtraMissingRefIDs() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kMissingRefIDs; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kMissingRefIDs; }
 
 		// members
 		ActivateParentID* unk10;  // 10

@@ -59,24 +59,24 @@ namespace RE
 		const_reference operator[](size_type a_pos) const;
 
 		wchar_t&       front();
-		const wchar_t& front() const;
+		[[nodiscard]] const wchar_t& front() const;
 
 		wchar_t&       back();
-		const wchar_t& back() const;
+		[[nodiscard]] const wchar_t& back() const;
 
-		const wchar_t* data() const noexcept;
+		[[nodiscard]] const wchar_t* data() const noexcept;
 		wchar_t*       data() noexcept;
 
-		const wchar_t* c_str() const noexcept;
+		[[nodiscard]] const wchar_t* c_str() const noexcept;
 
 		operator std::wstring_view() const noexcept;
 
 		// Capacity
 		[[nodiscard]] bool empty() const noexcept;
 
-		size_type size() const noexcept;
+		[[nodiscard]] size_type size() const noexcept;
 
-		size_type length() const noexcept;
+		[[nodiscard]] size_type length() const noexcept;
 
 		// Operations
 		void clear() noexcept;

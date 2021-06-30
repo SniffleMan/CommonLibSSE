@@ -327,7 +327,7 @@ namespace SKSE
 
 		void log_stats() const;
 
-		bool in_range(std::ptrdiff_t a_disp) const
+		[[nodiscard]] bool in_range(std::ptrdiff_t a_disp) const
 		{
 			constexpr auto min = std::numeric_limits<std::int32_t>::min();
 			constexpr auto max = std::numeric_limits<std::int32_t>::max();

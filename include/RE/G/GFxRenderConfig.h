@@ -28,19 +28,19 @@ namespace RE
 			kNoViewCull = 1 << 8
 		};
 
-		bool          IsUsingEdgeAA() const;
-		bool          IsEdgeAATextured() const;
-		bool          IsOptimizingTriangles() const;
-		bool          HasCxformAddAlpha() const;
-		bool          HasVertexFormat(VertexFormat a_fmt) const;
-		RenderFlag    GetStrokeRenderFlags() const;
-		RenderCapBits GetRendererCapBits() const;
-		GRenderer*    GetRenderer() const;
+		[[nodiscard]] bool          IsUsingEdgeAA() const;
+		[[nodiscard]] bool          IsEdgeAATextured() const;
+		[[nodiscard]] bool          IsOptimizingTriangles() const;
+		[[nodiscard]] bool          HasCxformAddAlpha() const;
+		[[nodiscard]] bool          HasVertexFormat(VertexFormat a_fmt) const;
+		[[nodiscard]] RenderFlag    GetStrokeRenderFlags() const;
+		[[nodiscard]] RenderCapBits GetRendererCapBits() const;
+		[[nodiscard]] GRenderer*    GetRenderer() const;
 		void          SetRenderFlags(RenderFlag a_flags);
-		RenderFlag    GetRenderFlags() const;
+		[[nodiscard]] RenderFlag    GetRenderFlags() const;
 		void          SetMaxCurvePixelError(float a_pixelError);
-		float         GetMaxCurvePixelError() const;
-		float         GetStrokerAAWidth() const;
+		[[nodiscard]] float         GetMaxCurvePixelError() const;
+		[[nodiscard]] float         GetStrokerAAWidth() const;
 		void          SetStrokerAAWidth(float a_aawidth);
 
 		// members

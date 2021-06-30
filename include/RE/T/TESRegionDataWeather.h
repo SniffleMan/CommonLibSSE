@@ -20,7 +20,7 @@ namespace RE
 		void ConstructSelf() override;                              // 04
 		void Unk_05(void) override;                                 // 05
 		void CopyFrom(TESRegionData* a_src, bool a_copy) override;  // 06
-		bool IsLoaded() const override;                             // 07 - { return weatherTypes.next || weatherTypes.cur; }
+		[[nodiscard]] bool IsLoaded() const override;                             // 07 - { return weatherTypes.next || weatherTypes.cur; }
 
 		// add
 		virtual void Unk_08(void);  // 08

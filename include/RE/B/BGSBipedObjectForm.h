@@ -59,13 +59,13 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		BipedObjectSlot AddSlotToMask(BipedObjectSlot a_slot);
-		ArmorType       GetArmorType() const;
-		BipedObjectSlot GetSlotMask() const;
-		bool            HasPartOf(BipedObjectSlot a_flag) const;
-		bool            IsClothing() const;
-		bool            IsHeavyArmor() const;
-		bool            IsLightArmor() const;
-		bool            IsShield() const;
+		[[nodiscard]] ArmorType       GetArmorType() const;
+		[[nodiscard]] BipedObjectSlot GetSlotMask() const;
+		[[nodiscard]] bool            HasPartOf(BipedObjectSlot a_flag) const;
+		[[nodiscard]] bool            IsClothing() const;
+		[[nodiscard]] bool            IsHeavyArmor() const;
+		[[nodiscard]] bool            IsLightArmor() const;
+		[[nodiscard]] bool            IsShield() const;
 		BipedObjectSlot RemoveSlotFromMask(BipedObjectSlot a_slot);
 		void            SetSlotMask(BipedObjectSlot a_mask);
 

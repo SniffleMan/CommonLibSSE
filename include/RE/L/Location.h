@@ -30,9 +30,9 @@ namespace RE
 			virtual ErrorCode     DoGetInfo1(const char* a_path, Info& a_info, Location*& a_location);                                                   // 06 - { return ErrorCode::kUnsupported; }
 			virtual ErrorCode     DoGetInfo2(const char* a_path, Info& a_info, LocationTraverser* a_traverser);                                          // 07 - { return ErrorCode::kUnsupported; }
 			virtual ErrorCode     DoDelete(const char* a_path);                                                                                          // 08 - { return ErrorCode::kUnsupported; }
-			virtual const char*   DoGetName() const;                                                                                                     // 09 - { return 0; }
-			virtual std::uint32_t DoQBufferHint() const;                                                                                                 // 0A - { return 0x80000; }
-			virtual std::uint32_t DoGetMinimumAsyncPacketSize() const;                                                                                   // 0B - { return 0x80000; }
+			[[nodiscard]] virtual const char*   DoGetName() const;                                                                                                     // 09 - { return 0; }
+			[[nodiscard]] virtual std::uint32_t DoQBufferHint() const;                                                                                                 // 0A - { return 0x80000; }
+			[[nodiscard]] virtual std::uint32_t DoGetMinimumAsyncPacketSize() const;                                                                                   // 0B - { return 0x80000; }
 
 			TES_HEAP_REDEFINE_NEW();
 

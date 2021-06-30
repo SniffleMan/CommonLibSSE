@@ -23,7 +23,7 @@ namespace RE
 
 	protected:
 		void  SetFloat(const float& a_val);
-		float GetFloat() const;
+		[[nodiscard]] float GetFloat() const;
 
 		// members
 		std::int16_t _value;  // 0

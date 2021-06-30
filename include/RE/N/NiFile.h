@@ -26,7 +26,7 @@ namespace RE
 
 		// add
 		virtual void          seek(std::int32_t a_offset, std::int32_t a_from);  // 06
-		virtual std::uint32_t size() const;                                      // 07
+		[[nodiscard]] virtual std::uint32_t size() const;                                      // 07
 
 		// members
 		std::uint32_t                             bufferAllocSize;  // 20

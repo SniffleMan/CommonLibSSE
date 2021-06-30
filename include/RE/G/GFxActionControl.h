@@ -23,7 +23,7 @@ namespace RE
 			pad1C(0)
 		{}
 
-		constexpr ActionControlFlags GetFlags() const { return *actionFlags; }
+		[[nodiscard]] constexpr ActionControlFlags GetFlags() const { return *actionFlags; }
 		constexpr void               SetFlags(ActionControlFlags a_actionFlags) { actionFlags = a_actionFlags; }
 
 		constexpr void SetVerboseLogging() noexcept { actionFlags.set(ActionControlFlags::kVerbose); }

@@ -24,17 +24,17 @@ namespace RE
 			value(a_key)
 		{}
 
-		bool IsEmpty() const
+		[[nodiscard]] bool IsEmpty() const
 		{
 			return nextInChain == -2;
 		}
 
-		bool IsEndOfChain() const
+		[[nodiscard]] bool IsEndOfChain() const
 		{
 			return nextInChain == -1;
 		}
 
-		UPInt GetCachedHash(UPInt a_maskValue) const
+		[[nodiscard]] UPInt GetCachedHash(UPInt a_maskValue) const
 		{
 			return hashValue;
 		}

@@ -24,7 +24,7 @@ namespace RE
 		~ExtraFlags() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kFlags; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kFlags; }
 
 		[[nodiscard]] constexpr bool IsActivationBlocked() const noexcept { return flags.all(Flag::kBlockActivate); }
 

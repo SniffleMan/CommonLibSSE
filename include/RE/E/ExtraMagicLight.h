@@ -17,7 +17,7 @@ namespace RE
 		~ExtraMagicLight() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kMagicLight; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kMagicLight; }
 	};
 	static_assert(sizeof(ExtraMagicLight) == 0x18);
 }

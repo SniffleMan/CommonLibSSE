@@ -62,17 +62,17 @@ namespace RE
 
 		// add
 		virtual GFxResourceKey     GetKey();                     // 01
-		virtual std::uint32_t      GetResourceTypeCode() const;  // 02
+		[[nodiscard]] virtual std::uint32_t      GetResourceTypeCode() const;  // 02
 		virtual GFxResourceReport* GetResourceReport();          // 03
 
 		static std::uint32_t MakeTypeCode(ResourceType a_resourceType, ResourceUse a_resourceUse = ResourceUse::kNone);  // Creates a resource type code which is a combination of ResourceType and ResourceUse.
 
 		void         AddRef();                                        // Thread-safe reference count implementation; increments the reference count.
 		bool         AddRef_NotZero();                                // Thread-safe reference count implementation ; increments a reference count if it is not zero.
-		std::int32_t GetRefCount() const;                             // Thread-Safe reference count implementation; returns the reference count.
+		[[nodiscard]] std::int32_t GetRefCount() const;                             // Thread-Safe reference count implementation; returns the reference count.
 		void         SetOwnerResourceLib(GFxResourceLibBase* a_lib);  // Assigns owner library for resource.
-		ResourceType GetResourceType() const;                         // Obtains the resource type.
-		ResourceUse  GetResourceUse() const;                          // Obtains the type of resource use.
+		[[nodiscard]] ResourceType GetResourceType() const;                         // Obtains the resource type.
+		[[nodiscard]] ResourceUse  GetResourceUse() const;                          // Obtains the type of resource use.
 
 	protected:
 		// members

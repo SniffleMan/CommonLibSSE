@@ -45,7 +45,7 @@ namespace RE
 
 		// add
 		virtual void          SetObjectVoiceType(BGSVoiceType* a_voiceType);                                                 // 48 - { return; }
-		virtual BGSVoiceType* GetObjectVoiceType() const;                                                                    // 49 - { return 0; }
+		[[nodiscard]] virtual BGSVoiceType* GetObjectVoiceType() const;                                                                    // 49 - { return 0; }
 		virtual NiAVObject*   Clone3D(TESObjectREFR* a_ref);                                                                 // 4A - { Clone3D(a_ref, false); }
 		virtual bool          ReplaceModel(const char* a_str);                                                               // 4B
 		virtual bool          GetActivateText(TESObjectREFR* a_activator, BSString& a_dst);                                  // 4C

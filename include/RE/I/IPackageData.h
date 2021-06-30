@@ -26,7 +26,7 @@ namespace RE
 		virtual void                 LoadBuffer(BGSLoadFormBuffer* a_buf);         // 08 - { return; }
 		virtual void                 Unk_09(void);                                 // 09 - { return; }
 		virtual bool                 GetDataAsString(BSString* a_dst) const = 0;   // 0A
-		virtual const BSFixedString& GetTypeName() const = 0;                      // 0B
+		[[nodiscard]] virtual const BSFixedString& GetTypeName() const = 0;                      // 0B
 		virtual void                 Unk_0C(void);                                 // 0C - { return 0; }
 	};
 	static_assert(sizeof(IPackageData) == 0x8);

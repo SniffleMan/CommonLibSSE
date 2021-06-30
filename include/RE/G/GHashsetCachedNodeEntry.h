@@ -30,17 +30,17 @@ namespace RE
 			value(a_keyRef)
 		{}
 
-		bool IsEmpty() const
+		[[nodiscard]] bool IsEmpty() const
 		{
 			return nextInChain == -2;
 		}
 
-		bool IsEndOfChain() const
+		[[nodiscard]] bool IsEndOfChain() const
 		{
 			return nextInChain == -1;
 		}
 
-		UPInt GetCachedHash([[maybe_unused]] UPInt a_maskValue) const
+		[[nodiscard]] UPInt GetCachedHash([[maybe_unused]] UPInt a_maskValue) const
 		{
 			return hashValue;
 		}

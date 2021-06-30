@@ -46,7 +46,7 @@ namespace RE
 
 		// override (TESLeveledList)
 		std::int32_t GetLevDifferenceMax() override;                            // 06 - { return iLevCharLevelDifferenceMax; }
-		bool         GetCanContainFormsOfType(FormType a_type) const override;  // 07 - { return a_type <= FormType::LeveledCharacter; }
+		[[nodiscard]] bool         GetCanContainFormsOfType(FormType a_type) const override;  // 07 - { return a_type <= FormType::LeveledCharacter; }
 	};
 	static_assert(sizeof(TESLevCharacter) == 0x90);
 }

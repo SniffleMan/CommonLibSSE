@@ -110,10 +110,10 @@ namespace RE
 		void Revert(BGSLoadFormBuffer* a_buf) override;    // 12
 		void InitItemImpl() override;                      // 13
 
-		bool IsCleared() const;
+		[[nodiscard]] bool IsCleared() const;
 		bool IsChild(const BGSLocation* a_possibleChild) const;
 		bool IsParent(const BGSLocation* a_possibleParent) const;
-		bool IsLoaded() const;
+		[[nodiscard]] bool IsLoaded() const;
 
 		// members
 		BGSLocation*                                   parentLoc;               // 48 - PNAM
