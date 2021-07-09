@@ -30,11 +30,11 @@ namespace RE
 		bool              AddExtraData(const BSFixedString& a_key, NiExtraData* a_extra);
 		bool              AddExtraData(NiExtraData* a_extra);
 		void              DeleteExtraData(std::uint16_t a_extraDataIndex);
-		NiTimeController* GetControllers() const;
+		[[nodiscard]] NiTimeController* GetControllers() const;
 		NiTimeController* GetController(const NiRTTI* a_rtti) const;
-		NiExtraData*      GetExtraData(const BSFixedString& a_key) const;
-		NiExtraData*      GetExtraDataAt(std::uint16_t a_extraDataIndex) const;
-		std::uint16_t     GetExtraDataSize() const;
+		[[nodiscard]] NiExtraData*      GetExtraData(const BSFixedString& a_key) const;
+		[[nodiscard]] NiExtraData*      GetExtraDataAt(std::uint16_t a_extraDataIndex) const;
+		[[nodiscard]] std::uint16_t     GetExtraDataSize() const;
 		bool              InsertExtraData(NiExtraData* a_extra);
 		void              RemoveAllExtraData();
 		bool              RemoveExtraData(const BSFixedString& a_key);

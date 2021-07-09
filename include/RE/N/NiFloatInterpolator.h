@@ -39,7 +39,7 @@ namespace RE
 		KeyType         GetKeyType(std::uint16_t a_channel) const override;                                     // 3C - { return floatData ? floatData->type : 0; }
 		void*           GetKeyArray(std::uint16_t a_channel) const override;                                    // 3D - { return floatData ? floatData->keys : 0; }
 		std::uint8_t    GetKeyStride(std::uint16_t a_channel) const override;                                   // 3E - { return floatData ? floatData->keySize : 0; }
-		bool            GetChannelPosed(std::uint16_t a_channel) const override;                                // 3F - { return !floatData && floatValue != -3.4028235e38; }
+		[[nodiscard]] bool            GetChannelPosed(std::uint16_t a_channel) const override;                                // 3F - { return !floatData && floatValue != -3.4028235e38; }
 
 		// members
 		float                  floatValue;  // 18

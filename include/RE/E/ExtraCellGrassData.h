@@ -30,7 +30,7 @@ namespace RE
 		~ExtraCellGrassData() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kCellGrassData; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kCellGrassData; }
 
 		// members
 		BSTArray<CellGrassData*>    grassHandles;  // 10

@@ -304,8 +304,8 @@ namespace RE
 		const char* GetFormEditorID() const override;             // 32 - { return formEditorID.c_str(); }
 		bool        SetFormEditorID(const char* a_str) override;  // 33 - { formEditorID = a_str; }
 
-		bool AllowsPCDialogue() const;
-		bool AllowsPickpocket() const;
+		[[nodiscard]] bool AllowsPCDialogue() const;
+		[[nodiscard]] bool AllowsPickpocket() const;
 
 		// members
 		TESModel                                       skeletonModels[SEXES::kTotal];                  // 098 - ANAM

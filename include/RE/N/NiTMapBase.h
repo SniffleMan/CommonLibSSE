@@ -260,7 +260,7 @@ namespace RE
 			return _allocator.size == 0;
 		}
 
-		size_type size() const noexcept
+		[[nodiscard]] size_type size() const noexcept
 		{
 			return _allocator.size;
 		}

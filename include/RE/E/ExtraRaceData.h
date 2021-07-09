@@ -17,7 +17,7 @@ namespace RE
 		~ExtraRaceData() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRaceData; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRaceData; }
 
 		// members
 		NiPointer<QueuedFile> preloadedRaceData;  // 10

@@ -13,7 +13,7 @@ namespace RE
 		~NiColorKey();
 
 		void            SetColor(const NiColorA& a_color);
-		const NiColorA& GetColor() const;
+		[[nodiscard]] const NiColorA& GetColor() const;
 		NiColorKey*     GetKeyAt(std::uint32_t a_index, std::uint8_t a_keySize);
 
 	protected:

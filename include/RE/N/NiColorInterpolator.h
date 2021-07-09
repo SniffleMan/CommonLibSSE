@@ -40,7 +40,7 @@ namespace RE
 		KeyType         GetKeyType(std::uint16_t a_channel) const override;                                     // 3C - { return colorData ? colorData->type : 0; }
 		void*           GetKeyArray(std::uint16_t a_channel) const override;                                    // 3D - { return colorData ? colorData->keys : 0; }
 		std::uint8_t    GetKeyStride(std::uint16_t a_channel) const override;                                   // 3E - { return colorData ? colorData->keySize : 0; }
-		bool            GetChannelPosed(std::uint16_t a_channel) const override;                                // 3F
+		[[nodiscard]] bool            GetChannelPosed(std::uint16_t a_channel) const override;                                // 3F
 
 		// members
 		NiColorA               colorValue;  // 18

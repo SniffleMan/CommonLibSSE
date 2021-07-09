@@ -34,7 +34,7 @@ namespace RE
 			ErrorCode     DoGetInfo2(const char* a_path, Info& a_info, LocationTraverser* a_traverser) override;                                          // 07
 			ErrorCode     DoDelete(const char* a_path) override;                                                                                          // 08
 			const char*   DoGetName() const override;                                                                                                     // 09 - { return directory.c_str(); }
-			std::uint32_t DoGetMinimumAsyncPacketSize() const override;                                                                                   // 0B - { return minimumAsyncPacketSize; }
+			[[nodiscard]] std::uint32_t DoGetMinimumAsyncPacketSize() const override;                                                                                   // 0B - { return minimumAsyncPacketSize; }
 
 			// members
 			BSFixedString prefix;                  // 10

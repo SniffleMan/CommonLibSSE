@@ -24,7 +24,7 @@ namespace RE
 				second(a_src.second)
 			{}
 
-			inline UPInt GetHash() const
+			[[nodiscard]] inline UPInt GetHash() const
 			{
 				return Hash()(*first);
 			}
@@ -84,7 +84,7 @@ namespace RE
 			return Hash()(a_data);
 		}
 
-		inline UPInt GetHash() const
+		[[nodiscard]] inline UPInt GetHash() const
 		{
 			return Hash()(first);
 		}

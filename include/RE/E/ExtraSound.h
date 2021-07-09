@@ -15,7 +15,7 @@ namespace RE
 		~ExtraSound() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kSound; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kSound; }
 
 		// members
 		BSSoundHandle phandle;  // 10

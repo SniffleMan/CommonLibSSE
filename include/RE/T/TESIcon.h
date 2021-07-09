@@ -12,7 +12,7 @@ namespace RE
 		~TESIcon() override;  // 00
 
 		// override (TESTexture)
-		const char* GetDefaultPath() const override;  // 06 - { return "Textures"; }
+		[[nodiscard]] const char* GetDefaultPath() const override;  // 06 - { return "Textures"; }
 	};
 	static_assert(sizeof(TESIcon) == 0x10);
 }

@@ -25,8 +25,8 @@ namespace RE
 
 		virtual ~InputEvent();  // 00
 
-		virtual bool                 HasIDCode() const;   // 01 - { return false; }
-		virtual const BSFixedString& QUserEvent() const;  // 02 - { return ""; }
+		[[nodiscard]] virtual bool                 HasIDCode() const;   // 01 - { return false; }
+		[[nodiscard]] virtual const BSFixedString& QUserEvent() const;  // 02 - { return ""; }
 
 		[[nodiscard]] constexpr INPUT_EVENT_TYPE GetEventType() const noexcept { return *eventType; }
 		[[nodiscard]] constexpr INPUT_DEVICE     GetDevice() const noexcept { return *device; }

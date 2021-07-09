@@ -24,7 +24,7 @@ namespace RE
 		~TESKey() override;  // 00
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 	};
 	static_assert(sizeof(TESKey) == 0x100);
 }

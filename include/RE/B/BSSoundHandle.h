@@ -33,7 +33,7 @@ namespace RE
 		BSSoundHandle();
 		~BSSoundHandle() = default;
 
-		bool IsValid() const;
+		[[nodiscard]] bool IsValid() const;
 		bool SetPosition(NiPoint3 a_pos);
 		void SetObjectToFollow(NiAVObject* a_node);
 		bool Stop();

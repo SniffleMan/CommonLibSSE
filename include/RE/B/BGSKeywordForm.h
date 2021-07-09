@@ -20,11 +20,11 @@ namespace RE
 
 		// add
 		virtual bool        HasKeyword(const BGSKeyword* a_keyword) const;  // 04
-		virtual BGSKeyword* GetDefaultKeyword() const;                      // 05 - { return 0; }
+		[[nodiscard]] virtual BGSKeyword* GetDefaultKeyword() const;                      // 05 - { return 0; }
 
-		bool                       HasKeyword(FormID a_formID) const;
-		std::optional<BGSKeyword*> GetKeywordAt(std::uint32_t a_idx) const;
-		std::uint32_t              GetNumKeywords() const;
+		[[nodiscard]] bool                       HasKeyword(FormID a_formID) const;
+		[[nodiscard]] std::optional<BGSKeyword*> GetKeywordAt(std::uint32_t a_idx) const;
+		[[nodiscard]] std::uint32_t              GetNumKeywords() const;
 
 		// members
 		BGSKeyword**  keywords;     // 08 - KWDA

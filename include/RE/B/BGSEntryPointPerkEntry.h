@@ -61,7 +61,7 @@ namespace RE
 		void            ApplyPerkEntry(Actor* a_actor) override;   // 0A
 		void            RemovePerkEntry(Actor* a_actor) override;  // 0B
 
-		bool IsEntryPoint(EntryPoint a_entryPoint) const;
+		[[nodiscard]] bool IsEntryPoint(EntryPoint a_entryPoint) const;
 
 		// members
 		EntryData                  entryData;     // 10 - DATA

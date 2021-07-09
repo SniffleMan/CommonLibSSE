@@ -19,7 +19,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		// add
-		virtual TESBoundObject* GetMenuDisplayObject() const;  // 04 - { return menuDispObject; }
+		[[nodiscard]] virtual TESBoundObject* GetMenuDisplayObject() const;  // 04 - { return menuDispObject; }
 
 		// members
 		TESBoundObject* menuDispObject;  // 08 - MDOB

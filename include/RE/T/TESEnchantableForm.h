@@ -20,7 +20,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		// add
-		virtual MagicSystem::CastingType GetCastingType() const;  // 04 - { return castingType; }
+		[[nodiscard]] virtual MagicSystem::CastingType GetCastingType() const;  // 04 - { return castingType; }
 
 		// members
 		EnchantmentItem*                                          formEnchanting;       // 08 - EITM

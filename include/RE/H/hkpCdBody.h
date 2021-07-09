@@ -7,7 +7,7 @@ namespace RE
 	class hkpCdBody
 	{
 	public:
-		const hkpShape* GetShape() const;
+		[[nodiscard]] const hkpShape* GetShape() const;
 
 		// members
 		const hkpShape*  shape;     // 00

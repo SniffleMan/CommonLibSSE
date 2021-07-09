@@ -221,29 +221,29 @@ namespace RE
 		const char* GetObjectTypeName() const override;           // 39 - { return g_animationStrings[data.animationType]; }
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
-		float         GetSpeed() const;
-		float         GetReach() const;
-		float         GetStagger() const;
-		float         GetMinRange() const;
-		float         GetMaxRange() const;
-		std::uint16_t GetCritDamage() const;
+		[[nodiscard]] float         GetSpeed() const;
+		[[nodiscard]] float         GetReach() const;
+		[[nodiscard]] float         GetStagger() const;
+		[[nodiscard]] float         GetMinRange() const;
+		[[nodiscard]] float         GetMaxRange() const;
+		[[nodiscard]] std::uint16_t GetCritDamage() const;
 		void          GetNodeName(char* a_dstBuff) const;
-		WEAPON_TYPE   GetWeaponType() const;
-		bool          IsBound() const;
-		bool          IsMelee() const;
-		bool          IsRanged() const;
-		bool          IsHandToHandMelee() const;
-		bool          IsOneHandedSword() const;
-		bool          IsOneHandedDagger() const;
-		bool          IsOneHandedAxe() const;
-		bool          IsOneHandedMace() const;
-		bool          IsTwoHandedSword() const;
-		bool          IsTwoHandedAxe() const;
-		bool          IsBow() const;
-		bool          IsStaff() const;
-		bool          IsCrossbow() const;
+		[[nodiscard]] WEAPON_TYPE   GetWeaponType() const;
+		[[nodiscard]] bool          IsBound() const;
+		[[nodiscard]] bool          IsMelee() const;
+		[[nodiscard]] bool          IsRanged() const;
+		[[nodiscard]] bool          IsHandToHandMelee() const;
+		[[nodiscard]] bool          IsOneHandedSword() const;
+		[[nodiscard]] bool          IsOneHandedDagger() const;
+		[[nodiscard]] bool          IsOneHandedAxe() const;
+		[[nodiscard]] bool          IsOneHandedMace() const;
+		[[nodiscard]] bool          IsTwoHandedSword() const;
+		[[nodiscard]] bool          IsTwoHandedAxe() const;
+		[[nodiscard]] bool          IsBow() const;
+		[[nodiscard]] bool          IsStaff() const;
+		[[nodiscard]] bool          IsCrossbow() const;
 
 		// members
 		Data                                         weaponData;              // 168 - DNAM

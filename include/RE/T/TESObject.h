@@ -25,13 +25,13 @@ namespace RE
 
 		// override (TESForm)
 		bool          IsObject() const override;     // 28 - { return true; }
-		std::uint32_t GetRefCount() const override;  // 2D - { return 0; }
+		[[nodiscard]] std::uint32_t GetRefCount() const override;  // 2D - { return 0; }
 
 		// add
 		virtual void          Unk_3B(void);                                // 3B - { return 0; }
 		virtual bool          IsBoundAnimObject();                         // 3C - { return false; }
-		virtual TESWaterForm* GetWaterType() const;                        // 3D - { return 0; }
-		virtual bool          IsAutoCalc() const;                          // 3E - { return false; }
+		[[nodiscard]] virtual TESWaterForm* GetWaterType() const;                        // 3D - { return 0; }
+		[[nodiscard]] virtual bool          IsAutoCalc() const;                          // 3E - { return false; }
 		virtual void          SetAutoCalc(bool a_autoCalc);                // 3F - { return; }
 		virtual NiAVObject*   Clone3D(TESObjectREFR* a_ref, bool a_arg3);  // 40 - { return 0; }
 		virtual void          UnClone3D(TESObjectREFR* a_ref);             // 41

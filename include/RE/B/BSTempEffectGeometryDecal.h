@@ -26,7 +26,7 @@ namespace RE
 		void             Attach() override;              // 26
 		bool             Update(float a_arg1) override;  // 28
 		NiAVObject*      Get3D() const override;         // 29
-		TEMP_EFFECT_TYPE GetType() const override;       // 2C - { return kGeometryDecal; }
+		[[nodiscard]] TEMP_EFFECT_TYPE GetType() const override;       // 2C - { return kGeometryDecal; }
 
 		// members
 		NiPointer<BSGeometry>             decal;                   // 30

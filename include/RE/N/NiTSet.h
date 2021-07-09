@@ -48,7 +48,7 @@ namespace RE
 			return operator[](0);
 		}
 
-		const_reference front() const
+		[[nodiscard]] const_reference front() const
 		{
 			return operator[](0);
 		}
@@ -58,7 +58,7 @@ namespace RE
 			return operator[](size() - 1);
 		}
 
-		const_reference back() const
+		[[nodiscard]] const_reference back() const
 		{
 			return operator[](size() - 1);
 		}
@@ -68,12 +68,12 @@ namespace RE
 			return _data;
 		}
 
-		const_iterator begin() const
+		[[nodiscard]] const_iterator begin() const
 		{
 			return _data;
 		}
 
-		const_iterator cbegin() const
+		[[nodiscard]] const_iterator cbegin() const
 		{
 			return _data;
 		}
@@ -83,27 +83,27 @@ namespace RE
 			return _data + _size;
 		}
 
-		const_iterator end() const
+		[[nodiscard]] const_iterator end() const
 		{
 			return _data + _size;
 		}
 
-		const_iterator cend() const
+		[[nodiscard]] const_iterator cend() const
 		{
 			return _data + _size;
 		}
 
-		bool empty() const
+		[[nodiscard]] bool empty() const
 		{
 			return _capacity == 0;
 		}
 
-		size_type size() const
+		[[nodiscard]] size_type size() const
 		{
 			return _size;
 		}
 
-		size_type capacity() const
+		[[nodiscard]] size_type capacity() const
 		{
 			return _capacity;
 		}

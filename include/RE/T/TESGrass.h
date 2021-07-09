@@ -70,31 +70,31 @@ namespace RE
 		void InitItemImpl() override;        // 13
 
 		// add
-		virtual std::uint8_t      GetDensity() const;                                         // 53 - { return data.density; }
+		[[nodiscard]] virtual std::uint8_t      GetDensity() const;                                         // 53 - { return data.density; }
 		virtual bool              SetDensity(std::uint8_t a_density);                         // 54 - { if (a_density > 100) return false; data.density = a_density; return true; }
-		virtual std::uint8_t      GetMinSlopeDegrees() const;                                 // 55 - { return data.minSlope; }
+		[[nodiscard]] virtual std::uint8_t      GetMinSlopeDegrees() const;                                 // 55 - { return data.minSlope; }
 		virtual bool              SetMinSlopeDegrees(std::uint8_t a_minSlope);                // 56 - { if (a_minSlope > 90 || a_minSlope > data.maxSlopeDegrees) return false; data.minSlopeDegrees = a_minSlope; return true; }
-		virtual std::uint8_t      GetMaxSlopeDegrees() const;                                 // 57 - { return data.maxSlope; }
+		[[nodiscard]] virtual std::uint8_t      GetMaxSlopeDegrees() const;                                 // 57 - { return data.maxSlope; }
 		virtual bool              SetMaxSlopeDegrees(std::uint8_t a_maxSlope);                // 58 - { if (a_maxSlope > 90 || a_maxSlope < data.minSlopeDegrees) return false; data.maxSlopeDegrees = a_maxSlope; return true; }
-		virtual float             GetMinSlope() const;                                        // 59 - { return data.minSlopeDegrees * 1deg; }
-		virtual float             GetMaxSlope() const;                                        // 5A - { return data.maxSlopeDegrees * 1deg; }
-		virtual std::uint16_t     GetDistanceFromWaterLevel() const;                          // 5B - { return data.distanceFromWaterLevel; }
+		[[nodiscard]] virtual float             GetMinSlope() const;                                        // 59 - { return data.minSlopeDegrees * 1deg; }
+		[[nodiscard]] virtual float             GetMaxSlope() const;                                        // 5A - { return data.maxSlopeDegrees * 1deg; }
+		[[nodiscard]] virtual std::uint16_t     GetDistanceFromWaterLevel() const;                          // 5B - { return data.distanceFromWaterLevel; }
 		virtual void              SetDistanceFromWaterLevel(std::uint16_t a_unitsFromWater);  // 5C - { data.distanceFromWaterLevel = a_unitsFromWater; }
-		virtual GRASS_WATER_STATE GetUnderwaterState() const;                                 // 5D - { return data.underwater; }
+		[[nodiscard]] virtual GRASS_WATER_STATE GetUnderwaterState() const;                                 // 5D - { return data.underwater; }
 		virtual void              SetUnderwaterState(GRASS_WATER_STATE a_waterState);         // 5E - { data.underwater = a_waterState; }
-		virtual float             GetPositionRange() const;                                   // 5F - { return data.positionRange; }
+		[[nodiscard]] virtual float             GetPositionRange() const;                                   // 5F - { return data.positionRange; }
 		virtual bool              SetPositionRange(float a_positionRange);                    // 60 - { if (a_positionRange < 0.0 || a_positionRange > 512.0) return false; data.positionRange = a_positionRange; return true; }
-		virtual float             GetHeightRange() const;                                     // 61 - { return data.heightRange; }
+		[[nodiscard]] virtual float             GetHeightRange() const;                                     // 61 - { return data.heightRange; }
 		virtual bool              SetHeightRange(float a_heightRange);                        // 62 - { if (a_heightRange < 0.0 || a_heightRange > 1.0) return false; data.heightRange = a_heightRange; return true; }
-		virtual float             GetColorRange() const;                                      // 63 - { return data.colorRange; }
+		[[nodiscard]] virtual float             GetColorRange() const;                                      // 63 - { return data.colorRange; }
 		virtual bool              SetColorRange(float a_colorRange);                          // 64 - { if (a_colorRange < 0.0 || a_colorRange > 1.0) return false; data.colorRange = a_colorRange; return true; }
-		virtual float             GetWavePeriod() const;                                      // 65 - { return data.wavePeriod; }
+		[[nodiscard]] virtual float             GetWavePeriod() const;                                      // 65 - { return data.wavePeriod; }
 		virtual bool              SetWavePeriod(float a_wavePeriod);                          // 66 - { if (a_wavePeriod <= 0.0) return false; data.wavePeriod = a_wavePeriod; return true; }
-		virtual bool              GetVertexLighting() const;                                  // 67 - { return data.flags & 1; }
+		[[nodiscard]] virtual bool              GetVertexLighting() const;                                  // 67 - { return data.flags & 1; }
 		virtual void              SetVertexLighting(bool a_set);                              // 68 - { if (a_set) data.flags |= 0x1; else data.flags &= 0xFE; }
-		virtual bool              GetUniformScaling() const;                                  // 69 - { return (data.flags >> 1) & 1; }
+		[[nodiscard]] virtual bool              GetUniformScaling() const;                                  // 69 - { return (data.flags >> 1) & 1; }
 		virtual void              SetUniformScaling(bool a_set);                              // 6A - { if (a_set) data.flags |= 0x2; else data.flags &= 0xFD; }
-		virtual bool              GetFitToSlope() const;                                      // 6B - { return (data.flags >> 2) & 1; }
+		[[nodiscard]] virtual bool              GetFitToSlope() const;                                      // 6B - { return (data.flags >> 2) & 1; }
 		virtual void              SetFitToSlope(bool a_set);                                  // 6C - { if (a_set) data.flags |= 0x4; else data.flags &= 0xFB; }
 
 		// members

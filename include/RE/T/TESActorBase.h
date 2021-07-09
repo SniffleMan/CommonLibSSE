@@ -51,10 +51,10 @@ namespace RE
 		void  ModActorValue(ActorValue a_akValue, float a_value) override;                                       // 05
 		void  RestoreActorValue(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_akValue, float a_value) override;  // 06
 		void  SetActorValue(ActorValue a_akValue, float a_value) override;                                       // 07
-		bool  GetIsPlayerOwner() const override;                                                                 // 08
+		[[nodiscard]] bool  GetIsPlayerOwner() const override;                                                                 // 08
 
 		// add
-		virtual bool            GetHasPLSpecTex() const;                        // 53 - { return false; }
+		[[nodiscard]] virtual bool            GetHasPLSpecTex() const;                        // 53 - { return false; }
 		virtual TESCombatStyle* GetCombatStyle();                               // 54 - { return 0; }
 		virtual void            SetCombatStyle(TESCombatStyle* a_combatStyle);  // 55 - { return; }
 		virtual TESForm*        GetAsForm();                                    // 56 - { return this; }

@@ -32,7 +32,7 @@ namespace RE
 			return _data;
 		}
 
-		const T* data() const
+		[[nodiscard]] const T* data() const
 		{
 			return _data;
 		}
@@ -42,7 +42,7 @@ namespace RE
 			return operator[](0);
 		}
 
-		const_reference front() const
+		[[nodiscard]] const_reference front() const
 		{
 			return operator[](0);
 		}
@@ -52,7 +52,7 @@ namespace RE
 			return operator[](size() - 1);
 		}
 
-		const_reference back() const
+		[[nodiscard]] const_reference back() const
 		{
 			return operator[](size() - 1);
 		}
@@ -62,12 +62,12 @@ namespace RE
 			return empty() ? iterator{} : std::addressof(data()[0]);
 		}
 
-		const_iterator begin() const
+		[[nodiscard]] const_iterator begin() const
 		{
 			return empty() ? const_iterator{} : std::addressof(data()[0]);
 		}
 
-		const_iterator cbegin() const
+		[[nodiscard]] const_iterator cbegin() const
 		{
 			return begin();
 		}
@@ -77,12 +77,12 @@ namespace RE
 			return empty() ? iterator{} : std::addressof(data()[size()]);
 		}
 
-		const_iterator end() const
+		[[nodiscard]] const_iterator end() const
 		{
 			return empty() ? const_iterator{} : std::addressof(data()[size()]);
 		}
 
-		const_iterator cend() const
+		[[nodiscard]] const_iterator cend() const
 		{
 			return end();
 		}
@@ -92,7 +92,7 @@ namespace RE
 			return size() == 0;
 		}
 
-		size_type size() const noexcept
+		[[nodiscard]] size_type size() const noexcept
 		{
 			return _size;
 		}
@@ -120,7 +120,7 @@ namespace RE
 			_capacityAndFlags |= a_newCap & kCapacityMask;
 		}
 
-		size_type capacity() const noexcept
+		[[nodiscard]] size_type capacity() const noexcept
 		{
 			return _capacityAndFlags & kCapacityMask;
 		}

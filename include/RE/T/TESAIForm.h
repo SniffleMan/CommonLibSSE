@@ -126,14 +126,14 @@ namespace RE
 		void ClearDataComponent() override;                     // 02
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
-		bool             AggroRadiusBehaviourIsEnabled() const;
-		ACTOR_AGGRESSION GetAggressionLevel() const;
-		ACTOR_ASSISTANCE GetAssistanceLevel() const;
-		ACTOR_CONFIDENCE GetConfidenceLevel() const;
-		std::uint8_t     GetEnergyLevel() const;
-		ACTOR_MOOD       GetMoodLevel() const;
-		ACTOR_MORALITY   GetMoralityLevel() const;
-		bool             NoSlowApproach() const;
+		[[nodiscard]] bool             AggroRadiusBehaviourIsEnabled() const;
+		[[nodiscard]] ACTOR_AGGRESSION GetAggressionLevel() const;
+		[[nodiscard]] ACTOR_ASSISTANCE GetAssistanceLevel() const;
+		[[nodiscard]] ACTOR_CONFIDENCE GetConfidenceLevel() const;
+		[[nodiscard]] std::uint8_t     GetEnergyLevel() const;
+		[[nodiscard]] ACTOR_MOOD       GetMoodLevel() const;
+		[[nodiscard]] ACTOR_MORALITY   GetMoralityLevel() const;
+		[[nodiscard]] bool             NoSlowApproach() const;
 
 		// members
 		AIDATA_GAME aiData;      // 08 - AIDT

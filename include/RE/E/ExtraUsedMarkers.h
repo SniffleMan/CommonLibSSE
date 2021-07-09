@@ -16,7 +16,7 @@ namespace RE
 		~ExtraUsedMarkers() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kUsedMarkers; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kUsedMarkers; }
 
 		// members
 		BSTArray<MarkerUsedData> usedMarkers;  // 10

@@ -14,7 +14,7 @@ namespace RE
 		~ExtraWornLeft() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kWorn; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kWorn; }
 	};
 	static_assert(sizeof(ExtraWornLeft) == 0x10);
 }

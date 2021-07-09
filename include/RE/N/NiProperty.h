@@ -28,7 +28,7 @@ namespace RE
 		void          ProcessClone(NiCloningProcess& a_cloning) override;  // 1D
 
 		// add
-		virtual Type GetType() const = 0;   // 25
+		[[nodiscard]] virtual Type GetType() const = 0;   // 25
 		virtual void Update(float a_time);  // 26
 	};
 	static_assert(sizeof(NiProperty) == 0x30);

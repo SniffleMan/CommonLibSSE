@@ -107,7 +107,7 @@ namespace RE
 		virtual void        PostAttachUpdate();                                                                                 // 33
 		virtual void        OnVisible(NiCullingProcess& a_process);                                                             // 34 - { return; }
 
-		bool GetAppCulled() const;
+		[[nodiscard]] bool GetAppCulled() const;
 		bool SetMotionType(std::uint32_t a_motionType, bool a_arg2 = true, bool a_arg3 = false, bool a_allowActivate = true);
 		void TintScenegraph(const NiColorA& a_color);
 		void Update(NiUpdateData& a_data);

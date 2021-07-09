@@ -21,7 +21,7 @@ namespace RE
 		void                 LoadBuffer(BGSLoadFormBuffer* a_buf) override;     // 08
 		void                 Unk_09(void) override;                             // 09 - { return; }
 		bool                 GetDataAsString(BSString* a_dst) const override;   // 0A - { return *a_dst->set_cstr(((data >> 1) & 1) ? "True" : "False"); }
-		const BSFixedString& GetTypeName() const override;                      // 0B - { return "Bool"; }
+		[[nodiscard]] const BSFixedString& GetTypeName() const override;                      // 0B - { return "Bool"; }
 	};
 	static_assert(offsetof(BGSPackageDataBool, data) == 0x08);
 	static_assert(sizeof(BGSPackageDataBool) == 0x10);

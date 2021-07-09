@@ -191,8 +191,8 @@ namespace RE
 			CachedData();
 			~CachedData();
 
-			GRenderer* GetRenderer() const;
-			Handle     GetRendererData() const;
+			[[nodiscard]] GRenderer* GetRenderer() const;
+			[[nodiscard]] Handle     GetRendererData() const;
 			void       SetRendererData(Handle a_handle);
 			void       ReleaseData(CachedDataType a_type);
 			void       ReleaseDataByRenderer();

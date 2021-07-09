@@ -16,7 +16,7 @@ namespace RE
 		~ExtraFriendHits() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kFriendHits; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kFriendHits; }
 
 		// members
 		BSTArray<AITimeStamp> hits;  // 10

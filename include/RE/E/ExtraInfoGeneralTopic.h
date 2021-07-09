@@ -30,7 +30,7 @@ namespace RE
 		~ExtraInfoGeneralTopic() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kInfoGeneralTopic; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kInfoGeneralTopic; }
 
 		// members
 		Data* unk10;  // 10

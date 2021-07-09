@@ -27,11 +27,11 @@ namespace RE
 		virtual TESForm* CreateImpl() = 0;  // 01
 
 	public:
-		virtual const char*          GetFormName() const = 0;    // 02
-		virtual FormType             GetFormType() const = 0;    // 03
-		virtual const char*          GetObjectName() const;      // 04 - { return 0; }
-		virtual OBJECT_TYPE          GetObjectType() const;      // 05 - { return 106; }
-		virtual OBJECT_CATEGORY_TYPE GetObjectCategory() const;  // 06 - { return 9; }
+		[[nodiscard]] virtual const char*          GetFormName() const = 0;    // 02
+		[[nodiscard]] virtual FormType             GetFormType() const = 0;    // 03
+		[[nodiscard]] virtual const char*          GetObjectName() const;      // 04 - { return 0; }
+		[[nodiscard]] virtual OBJECT_TYPE          GetObjectType() const;      // 05 - { return 106; }
+		[[nodiscard]] virtual OBJECT_CATEGORY_TYPE GetObjectCategory() const;  // 06 - { return 9; }
 
 		static std::pair<IFormFactory**, bool> GetFormFactories();
 		static IFormFactory*                   GetFormFactoryByType(FormType a_formType);

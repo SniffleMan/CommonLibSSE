@@ -35,7 +35,7 @@ namespace RE
 		bool          RegisterStreamables(NiStream& a_stream) override;   // 1A - { return NiProperty::RegisterStreamables(a_stream); }
 		void          SaveBinary(NiStream& a_stream) override;            // 1B
 		bool          IsEqual(NiObject* a_object) override;               // 1C
-		Type          GetType() const override;                           // 25 - { return Type::kAlpha; }
+		[[nodiscard]] Type          GetType() const override;                           // 25 - { return Type::kAlpha; }
 
 		// members
 		std::uint64_t unk30;  // 30

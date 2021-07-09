@@ -59,9 +59,9 @@ namespace RE
 		bool Load(TESFile* a_mod) override;     // 06
 		void InitItemImpl() override;           // 13
 		bool GetPlayable() const override;      // 19 - { return true; }
-		bool IsHeadingMarker() const override;  // 1A - { return (flags >> 2) & 1; }
+		[[nodiscard]] bool IsHeadingMarker() const override;  // 1A - { return (flags >> 2) & 1; }
 
-		bool HasTreeLOD() const;
+		[[nodiscard]] bool HasTreeLOD() const;
 
 		// members
 		TESObjectSTATData data;  // 68 - DNAM

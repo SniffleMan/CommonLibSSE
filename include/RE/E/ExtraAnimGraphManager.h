@@ -17,7 +17,7 @@ namespace RE
 		~ExtraAnimGraphManager() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kAnimGraphManager; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kAnimGraphManager; }
 
 		// members
 		BSTSmartPointer<BSAnimationGraphManager> animGraphMgr;  // 10

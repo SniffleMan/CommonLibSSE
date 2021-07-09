@@ -17,7 +17,7 @@ namespace RE
 		~ExtraBiped() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kBiped; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kBiped; }
 
 		// members
 		BSTSmartPointer<BipedAnim> biped;  // 10

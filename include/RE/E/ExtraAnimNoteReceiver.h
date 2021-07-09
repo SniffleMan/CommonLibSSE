@@ -14,7 +14,7 @@ namespace RE
 		~ExtraAnimNoteReceiver() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kAnimNoteReceiver; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kAnimNoteReceiver; }
 
 		// members
 		void* unk10;  // 10

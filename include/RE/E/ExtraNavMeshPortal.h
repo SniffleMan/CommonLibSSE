@@ -32,7 +32,7 @@ namespace RE
 		~ExtraNavMeshPortal() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kNavMeshPortal; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kNavMeshPortal; }
 
 		// members
 		NAVMESH_PORTAL portal;  // 10

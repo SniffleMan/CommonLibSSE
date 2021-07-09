@@ -44,8 +44,8 @@ namespace RE
 
 			void  AddRef();
 			void  Release();
-			UPInt GetCapacity() const;
-			bool  IsFull() const;
+			[[nodiscard]] UPInt GetCapacity() const;
+			[[nodiscard]] bool  IsFull() const;
 			void  SetFull(bool a_set);
 
 			// members
@@ -85,24 +85,24 @@ namespace RE
 		const_reference operator[](size_type a_pos) const;
 
 		char&       front();
-		const char& front() const;
+		[[nodiscard]] const char& front() const;
 
 		char&       back();
-		const char& back() const;
+		[[nodiscard]] const char& back() const;
 
-		const char* data() const noexcept;
+		[[nodiscard]] const char* data() const noexcept;
 		char*       data() noexcept;
 
-		const char* c_str() const noexcept;
+		[[nodiscard]] const char* c_str() const noexcept;
 
 		operator std::string_view() const noexcept;
 
 		// Capacity
 		[[nodiscard]] bool empty() const noexcept;
 
-		size_type size() const noexcept;
+		[[nodiscard]] size_type size() const noexcept;
 
-		size_type length() const noexcept;
+		[[nodiscard]] size_type length() const noexcept;
 
 		// Operations
 		void clear() noexcept;
@@ -122,8 +122,8 @@ namespace RE
 
 	protected:
 		GString*  ctor(const char* a_str);
-		HeapType  heap_type() const;
-		DataDesc* get_desc() const;
+		[[nodiscard]] HeapType  heap_type() const;
+		[[nodiscard]] DataDesc* get_desc() const;
 		void      set_desc(DataDesc* a_desc);
 
 		// members

@@ -15,7 +15,7 @@ namespace RE
 		~ExtraEditorID() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kEditorID; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kEditorID; }
 
 		// members
 		BSFixedString editorID;  // 10

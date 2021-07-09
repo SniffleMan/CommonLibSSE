@@ -37,7 +37,7 @@ namespace RE
 		inline static constexpr auto Ni_RTTI = NiRTTI_NiCullingProcess;
 
 		// add
-		virtual const NiRTTI*                 GetRTTI() const;                      // 00
+		[[nodiscard]] virtual const NiRTTI*                 GetRTTI() const;                      // 00
 		virtual NiNode*                       GetAsNiNode();                        // 01 - { return 0; }
 		virtual NiSwitchNode*                 GetAsNiSwitchNode();                  // 02 - { return 0; }
 		virtual BSFadeNode*                   GetAsBSFadeNode();                    // 03 - { return 0; }

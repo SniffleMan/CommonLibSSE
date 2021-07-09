@@ -54,7 +54,7 @@ namespace RE
 		void        ClearData() override;              // 05 - { BGSStoryManagerNodeBase::ClearData(); }
 		bool        Load(TESFile* a_mod) override;     // 06
 		void        InitItemImpl() override;           // 13
-		const char* GetFormEditorID() const override;  // 32 - { if (!((flags >> 3) & 1)) return "(Uninitialized event node)"; return event ? event->name.c_str() : "(No event)"; }
+		[[nodiscard]] const char* GetFormEditorID() const override;  // 32 - { if (!((flags >> 3) & 1)) return "(Uninitialized event node)"; return event ? event->name.c_str() : "(No event)"; }
 
 		// members
 		const BGSRegisteredStoryEvent* event;  // 60 - ENAM

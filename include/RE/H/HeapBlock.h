@@ -16,9 +16,9 @@ namespace RE
 		struct Used
 		{
 		public:
-			std::uint32_t GetCheckPoint() const;
-			std::uint32_t GetMemContext() const;
-			std::uint32_t GetStackTrace() const;
+			[[nodiscard]] std::uint32_t GetCheckPoint() const;
+			[[nodiscard]] std::uint32_t GetMemContext() const;
+			[[nodiscard]] std::uint32_t GetStackTrace() const;
 
 			// members
 			bool memContext1: 1;   // 0 - 0

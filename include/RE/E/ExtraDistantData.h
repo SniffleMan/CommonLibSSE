@@ -15,7 +15,7 @@ namespace RE
 		~ExtraDistantData() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kDistantData; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kDistantData; }
 
 		// members
 		NiPoint3      landNormal;  // 10

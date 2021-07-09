@@ -115,7 +115,7 @@ namespace RE
 		virtual void Unk_36(void);               // 36 - { return 0; }
 		virtual void Unk_37(void);               // 37 - { return 0; }
 		virtual void Unk_38(void);               // 38 - { return 0; }
-		virtual bool AcceptsEffectData() const;  // 39 - { return false; }
+		[[nodiscard]] virtual bool AcceptsEffectData() const;  // 39 - { return false; }
 		virtual void Unk_3A(void);               // 3A - { return; }
 		virtual void Unk_3B(void);               // 3B - { return; }
 		virtual void Unk_3C(void);               // 3C - { return 0; }

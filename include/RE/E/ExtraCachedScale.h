@@ -14,7 +14,7 @@ namespace RE
 		~ExtraCachedScale() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kCachedScale; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kCachedScale; }
 
 		// members
 		float scale3D;   // 10

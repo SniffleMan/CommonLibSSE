@@ -170,7 +170,7 @@ namespace RE
 			return (reference)_root.next;
 		}
 
-		const_reference front() const
+		[[nodiscard]] const_reference front() const
 		{
 			return (const_reference)_root.next;
 		}
@@ -180,7 +180,7 @@ namespace RE
 			return (reference)_root.prev;
 		}
 
-		const_reference back() const
+		[[nodiscard]] const_reference back() const
 		{
 			return (const_reference)_root.prev;
 		}
@@ -190,12 +190,12 @@ namespace RE
 			return iterator(_root.next);
 		}
 
-		const_iterator begin() const noexcept
+		[[nodiscard]] const_iterator begin() const noexcept
 		{
 			return const_iterator(_root.next);
 		}
 
-		const_iterator cbegin() const noexcept
+		[[nodiscard]] const_iterator cbegin() const noexcept
 		{
 			return const_iterator(_root.next);
 		}
@@ -205,12 +205,12 @@ namespace RE
 			return iterator(&_root);
 		}
 
-		const_iterator end() const noexcept
+		[[nodiscard]] const_iterator end() const noexcept
 		{
 			return const_iterator(const_cast<GListNode<value_type>*>(&_root));
 		}
 
-		const_iterator cend() const noexcept
+		[[nodiscard]] const_iterator cend() const noexcept
 		{
 			return const_iterator(const_cast<GListNode<value_type>*>(&_root));
 		}
@@ -220,12 +220,12 @@ namespace RE
 			return reverse_iterator(_root.prev);
 		}
 
-		const_reverse_iterator rbegin() const noexcept
+		[[nodiscard]] const_reverse_iterator rbegin() const noexcept
 		{
 			return const_reverse_iterator(_root.prev);
 		}
 
-		const_reverse_iterator crbegin() const noexcept
+		[[nodiscard]] const_reverse_iterator crbegin() const noexcept
 		{
 			return const_reverse_iterator(_root.prev);
 		}
@@ -235,12 +235,12 @@ namespace RE
 			return reverse_iterator(&_root);
 		}
 
-		const_reverse_iterator rend() const noexcept
+		[[nodiscard]] const_reverse_iterator rend() const noexcept
 		{
 			return const_reverse_iterator(const_cast<GListNode<value_type>*>(&_root));
 		}
 
-		const_reverse_iterator crend() const noexcept
+		[[nodiscard]] const_reverse_iterator crend() const noexcept
 		{
 			return const_reverse_iterator(const_cast<GListNode<value_type>*>(&_root));
 		}
@@ -250,7 +250,7 @@ namespace RE
 			return _root.next == &_root;
 		}
 
-		size_type size() const noexcept
+		[[nodiscard]] size_type size() const noexcept
 		{
 			size_type size = 0;
 			for (auto it = begin(); it != end(); ++it) {

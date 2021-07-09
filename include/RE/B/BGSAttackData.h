@@ -47,7 +47,7 @@ namespace RE
 
 		~BGSAttackData() override;  // 00
 
-		bool IsLeftAttack() const;
+		[[nodiscard]] bool IsLeftAttack() const;
 
 		// members
 		BSFixedString event;  // 10 - ATKE

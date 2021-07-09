@@ -158,9 +158,9 @@ namespace RE
 
 		// override (TESFullName)
 		std::uint32_t GetFullNameLength() const override;  // 04
-		const char*   GetFullName() const override;        // 05
+		[[nodiscard]] const char*   GetFullName() const override;        // 05
 
-		float GetPriority() const;
+		[[nodiscard]] float GetPriority() const;
 
 		// members
 		DIALOGUE_DATA      data;                     // 30 - DATA

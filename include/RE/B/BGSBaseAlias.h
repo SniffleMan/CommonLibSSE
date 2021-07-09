@@ -61,11 +61,11 @@ namespace RE
 		// add
 		virtual bool                 Load(TESFile* a_mod) = 0;       // 01
 		virtual void                 InitItem(TESForm* a_form) = 0;  // 02
-		virtual const BSFixedString& QType() const = 0;              // 03
+		[[nodiscard]] virtual const BSFixedString& QType() const = 0;              // 03
 
-		const BSFixedString& GetTypeString() const;
-		VMTypeID             GetVMTypeID() const;
-		bool                 IsQuestObject() const;
+		[[nodiscard]] const BSFixedString& GetTypeString() const;
+		[[nodiscard]] VMTypeID             GetVMTypeID() const;
+		[[nodiscard]] bool                 IsQuestObject() const;
 
 		// members
 		BSFixedString                              aliasName;    // 08 - ALID

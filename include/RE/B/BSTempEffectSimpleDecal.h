@@ -26,7 +26,7 @@ namespace RE
 		void          Initialize() override;          // 25
 		void          Attach() override;              // 26
 		bool          Update(float a_arg1) override;  // 28
-		NiAVObject*   Get3D() const override;         // 29
+		[[nodiscard]] NiAVObject*   Get3D() const override;         // 29
 
 		// members
 		std::uint8_t            unk30;            // 030

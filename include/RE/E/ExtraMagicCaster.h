@@ -17,7 +17,7 @@ namespace RE
 		~ExtraMagicCaster() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kMagicCaster; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kMagicCaster; }
 	};
 	static_assert(sizeof(ExtraMagicCaster) == 0x58);
 }

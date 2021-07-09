@@ -63,7 +63,7 @@ namespace RE
 		~GFxState() override = default;  // 00
 
 		// GetStateType obtains the StateType of this state. The state type of a given object never changes after construction
-		StateType GetStateType() const;
+		[[nodiscard]] StateType GetStateType() const;
 
 	protected:
 		StateType     stateType;  // 10

@@ -47,24 +47,24 @@ namespace RE
 			bool operator<=(const Variable& a_rhs) const;
 			bool operator>=(const Variable& a_rhs) const;
 
-			bool IsArray() const;
-			bool IsBool() const;
-			bool IsFloat() const;
-			bool IsInt() const;
-			bool IsLiteralArray() const;
-			bool IsNoneArray() const;
-			bool IsNoneObject() const;
-			bool IsObject(void) const;
-			bool IsObjectArray() const;
-			bool IsString() const;
+			[[nodiscard]] bool IsArray() const;
+			[[nodiscard]] bool IsBool() const;
+			[[nodiscard]] bool IsFloat() const;
+			[[nodiscard]] bool IsInt() const;
+			[[nodiscard]] bool IsLiteralArray() const;
+			[[nodiscard]] bool IsNoneArray() const;
+			[[nodiscard]] bool IsNoneObject() const;
+			[[nodiscard]] bool IsObject(void) const;
+			[[nodiscard]] bool IsObjectArray() const;
+			[[nodiscard]] bool IsString() const;
 
-			std::int32_t            GetSInt() const;
-			std::uint32_t           GetUInt() const;
-			float                   GetFloat() const;
-			bool                    GetBool() const;
-			BSTSmartPointer<Array>  GetArray() const;
-			BSTSmartPointer<Object> GetObject() const;
-			std::string_view        GetString() const;
+			[[nodiscard]] std::int32_t            GetSInt() const;
+			[[nodiscard]] std::uint32_t           GetUInt() const;
+			[[nodiscard]] float                   GetFloat() const;
+			[[nodiscard]] bool                    GetBool() const;
+			[[nodiscard]] BSTSmartPointer<Array>  GetArray() const;
+			[[nodiscard]] BSTSmartPointer<Object> GetObject() const;
+			[[nodiscard]] std::string_view        GetString() const;
 
 			void SetNone();
 			void SetSInt(std::int32_t a_val);

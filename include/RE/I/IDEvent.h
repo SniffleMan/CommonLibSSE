@@ -14,7 +14,7 @@ namespace RE
 
 		// override
 		bool                 HasIDCode() const override;   // 01 - { return true; }
-		const BSFixedString& QUserEvent() const override;  // 02 - { return userEvent; }
+		[[nodiscard]] const BSFixedString& QUserEvent() const override;  // 02 - { return userEvent; }
 
 		[[nodiscard]] constexpr std::uint32_t GetIDCode() const noexcept { return idCode; }
 

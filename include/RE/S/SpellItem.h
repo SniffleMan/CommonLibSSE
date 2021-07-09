@@ -90,7 +90,7 @@ namespace RE
 		void                     InitChunk() override;                                                  // 70
 
 		// override (BGSMenuDisplayObject)
-		TESBoundObject* GetMenuDisplayObject() const override;  // 04 - { return menuDispObject; }
+		[[nodiscard]] TESBoundObject* GetMenuDisplayObject() const override;  // 04 - { return menuDispObject; }
 
 		// members
 		Data data;  // C0 - SPIT

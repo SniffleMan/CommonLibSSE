@@ -14,7 +14,7 @@ namespace RE
 		~ExtraDetachTime() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kDetachTime; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kDetachTime; }
 
 		// members
 		std::uint32_t time;   // 10

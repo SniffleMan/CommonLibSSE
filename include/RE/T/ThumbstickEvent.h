@@ -19,8 +19,8 @@ namespace RE
 		};
 		using InputType = InputTypes::InputType;
 
-		bool IsLeft() const;
-		bool IsRight() const;
+		[[nodiscard]] bool IsLeft() const;
+		[[nodiscard]] bool IsRight() const;
 
 		// members
 		float xValue;  // 28

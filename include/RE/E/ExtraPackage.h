@@ -17,7 +17,7 @@ namespace RE
 		~ExtraPackage() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kPackage; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kPackage; }
 
 		// members
 		TESPackage*     unk10;           // 10

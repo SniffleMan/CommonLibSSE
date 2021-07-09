@@ -25,7 +25,7 @@ namespace RE
 		const NiRTTI*    GetRTTI() const override;       // 02
 		void             Detach() override;              // 27
 		bool             Update(float a_arg1) override;  // 28
-		TEMP_EFFECT_TYPE GetType() const override;       // 2C - { return kParticle; }
+		[[nodiscard]] TEMP_EFFECT_TYPE GetType() const override;       // 2C - { return kParticle; }
 
 		// members
 		NiPointer<NiAVObject>                       particle3D;         // 30

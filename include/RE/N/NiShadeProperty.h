@@ -20,7 +20,7 @@ namespace RE
 		bool          RegisterStreamables(NiStream& a_stream) override;   // 1A - { return NiProperty::RegisterStreamables(a_stream); }
 		void          SaveBinary(NiStream& a_stream) override;            // 1B - { NiProperty::SaveBinary(a_stream); }
 		bool          IsEqual(NiObject* a_object) override;               // 1C - { return NiProperty::IsEqual(a_object); }
-		Type          GetType() const override;                           // 25 - { return Type::kShade; }
+		[[nodiscard]] Type          GetType() const override;                           // 25 - { return Type::kShade; }
 
 		// add
 		virtual void Unk_27(void);  // 27 - { return 1; }

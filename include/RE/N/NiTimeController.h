@@ -59,12 +59,12 @@ namespace RE
 		virtual void  Stop();                                          // 26
 		virtual void  Update(float a_time) = 0;                        // 27
 		virtual void  SetTarget(NiObjectNET* a_target);                // 28
-		virtual bool  IsTransformController() const { return false; }  // 29
-		virtual bool  IsVertexController() const { return false; }     // 2A
+		[[nodiscard]] virtual bool  IsTransformController() const { return false; }  // 29
+		[[nodiscard]] virtual bool  IsVertexController() const { return false; }     // 2A
 		virtual float ComputeScaledTime(float a_time);                 // 2B
 		virtual void  OnPreDisplay() { return; }                       // 2C
-		virtual bool  IsStreamable() const { return true; }            // 2D
-		virtual bool  TargetIsRequiredType() const = 0;                // 2E
+		[[nodiscard]] virtual bool  IsStreamable() const { return true; }            // 2D
+		[[nodiscard]] virtual bool  TargetIsRequiredType() const = 0;                // 2E
 
 		[[nodiscard]] constexpr NiTimeController* GetNext() const noexcept { return next.get(); }
 

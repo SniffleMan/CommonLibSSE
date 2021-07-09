@@ -14,7 +14,7 @@ namespace RE
 		~ExtraLeveledItem() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kLeveledItem; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kLeveledItem; }
 
 		// members
 		FormID        levItem;  // 10

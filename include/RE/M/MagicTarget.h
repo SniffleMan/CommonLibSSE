@@ -49,7 +49,7 @@ namespace RE
 		// add
 		virtual void                         Unk_01(void);                                                                             // 01
 		virtual TESObjectREFR*               GetTargetStatsObject();                                                                   // 02 - { return false; }
-		virtual bool                         MagicTargetIsActor() const;                                                               // 03 - { return false; }
+		[[nodiscard]] virtual bool                         MagicTargetIsActor() const;                                                               // 03 - { return false; }
 		virtual bool                         IsInvulnerable();                                                                         // 04 - { return false; }
 		virtual void                         InvalidateCommandedActorEffect(ActiveEffect* a_effect);                                   // 05 - { return; }
 		virtual bool                         CanAddActiveEffect() = 0;                                                                 // 06

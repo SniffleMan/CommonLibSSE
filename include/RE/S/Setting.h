@@ -36,16 +36,16 @@ namespace RE
 		// add
 		virtual bool Unk_01(void);  // 01 - { return false; }
 
-		bool        IsManaged() const;
-		Type        GetType() const;
-		const char* GetName() const;
+		[[nodiscard]] bool        IsManaged() const;
+		[[nodiscard]] Type        GetType() const;
+		[[nodiscard]] const char* GetName() const;
 
-		bool          GetBool() const;
-		float         GetFloat() const;
-		std::int32_t  GetSInt() const;
-		Color         GetColor() const;
-		const char*   GetString() const;
-		std::uint32_t GetUInt() const;
+		[[nodiscard]] bool          GetBool() const;
+		[[nodiscard]] float         GetFloat() const;
+		[[nodiscard]] std::int32_t  GetSInt() const;
+		[[nodiscard]] Color         GetColor() const;
+		[[nodiscard]] const char*   GetString() const;
+		[[nodiscard]] std::uint32_t GetUInt() const;
 
 		// members
 		Data  data;  // 08

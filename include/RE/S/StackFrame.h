@@ -14,8 +14,8 @@ namespace RE
 		class StackFrame
 		{
 		public:
-			std::uint32_t GetPageForFrame() const;
-			Variable&     GetStackFrameVariable(std::uint32_t a_index, std::uint32_t a_pageHint) const;
+			[[nodiscard]] std::uint32_t GetPageForFrame() const;
+			[[nodiscard]] Variable&     GetStackFrameVariable(std::uint32_t a_index, std::uint32_t a_pageHint) const;
 
 			// members
 			Stack*                          parent;              // 00

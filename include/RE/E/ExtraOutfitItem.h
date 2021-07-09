@@ -14,7 +14,7 @@ namespace RE
 		~ExtraOutfitItem() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kOutfitItem; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kOutfitItem; }
 
 		// members
 		FormID        id;     // 10 - BGSOutfit

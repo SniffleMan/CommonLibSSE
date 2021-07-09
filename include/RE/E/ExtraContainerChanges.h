@@ -18,7 +18,7 @@ namespace RE
 		~ExtraContainerChanges() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kContainerChanges; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kContainerChanges; }
 
 		// members
 		InventoryChanges* changes;  // 10

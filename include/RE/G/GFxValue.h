@@ -145,21 +145,21 @@ namespace RE
 			DisplayInfo(bool a_visible);          // Initializes the DisplayInfo structure.
 
 			void             Clear();                                                                                                                                                                                                                                                                          // Clears all properties from the DisplayInfo object.
-			double           GetAlpha() const;                                                                                                                                                                                                                                                                 // Retrieves the alpha transparency of the display object.
-			double           GetFOV() const;                                                                                                                                                                                                                                                                   // Retrieves the perspective Field of View angle on the object.
-			double           GetRotation() const;                                                                                                                                                                                                                                                              // Retrieves the rotation of the display object.
-			bool             GetVisible() const;                                                                                                                                                                                                                                                               // Retrieves the Boolean value to indicate the visibility of the display object.
-			const GMatrix3D* GetPerspectiveMatrix3D() const;                                                                                                                                                                                                                                                   // Returns a temporary pointer to the 3D perspective matrix set on a 3D movie clip.
-			const GMatrix3D* GetViewMatrix3D() const;                                                                                                                                                                                                                                                          // Returns a temporary pointer to the 3D view matrix set on the 3D movie clip.
-			double           GetX() const;                                                                                                                                                                                                                                                                     // Retrieves the x coordinate of the display object relative to the parent movie clip.
-			double           GetY() const;                                                                                                                                                                                                                                                                     // Retrieves the y coordinate of the display object relative to the parent movie clip.
-			double           GetZ() const;                                                                                                                                                                                                                                                                     // Retrieves the z coordinate of the display object relative to the parent movie clip.
-			double           GetXRotation() const;                                                                                                                                                                                                                                                             // Returns the rotation of the object around the X axis.
-			double           GetYRotation() const;                                                                                                                                                                                                                                                             // Returns the rotation of the object around the Y axis.
-			double           GetXScale() const;                                                                                                                                                                                                                                                                // Retrieves the horizontal scale of the display object.
-			double           GetYScale() const;                                                                                                                                                                                                                                                                // Retrieves the vertical scale of the display object.
-			double           GetZScale() const;                                                                                                                                                                                                                                                                // Retrieves the scale of the object along the Z axis.
-			bool             IsFlagSet(Flag a_flag) const;                                                                                                                                                                                                                                                     // Determines if a property of the DisplayInfo object is set
+			[[nodiscard]] double           GetAlpha() const;                                                                                                                                                                                                                                                                 // Retrieves the alpha transparency of the display object.
+			[[nodiscard]] double           GetFOV() const;                                                                                                                                                                                                                                                                   // Retrieves the perspective Field of View angle on the object.
+			[[nodiscard]] double           GetRotation() const;                                                                                                                                                                                                                                                              // Retrieves the rotation of the display object.
+			[[nodiscard]] bool             GetVisible() const;                                                                                                                                                                                                                                                               // Retrieves the Boolean value to indicate the visibility of the display object.
+			[[nodiscard]] const GMatrix3D* GetPerspectiveMatrix3D() const;                                                                                                                                                                                                                                                   // Returns a temporary pointer to the 3D perspective matrix set on a 3D movie clip.
+			[[nodiscard]] const GMatrix3D* GetViewMatrix3D() const;                                                                                                                                                                                                                                                          // Returns a temporary pointer to the 3D view matrix set on the 3D movie clip.
+			[[nodiscard]] double           GetX() const;                                                                                                                                                                                                                                                                     // Retrieves the x coordinate of the display object relative to the parent movie clip.
+			[[nodiscard]] double           GetY() const;                                                                                                                                                                                                                                                                     // Retrieves the y coordinate of the display object relative to the parent movie clip.
+			[[nodiscard]] double           GetZ() const;                                                                                                                                                                                                                                                                     // Retrieves the z coordinate of the display object relative to the parent movie clip.
+			[[nodiscard]] double           GetXRotation() const;                                                                                                                                                                                                                                                             // Returns the rotation of the object around the X axis.
+			[[nodiscard]] double           GetYRotation() const;                                                                                                                                                                                                                                                             // Returns the rotation of the object around the Y axis.
+			[[nodiscard]] double           GetXScale() const;                                                                                                                                                                                                                                                                // Retrieves the horizontal scale of the display object.
+			[[nodiscard]] double           GetYScale() const;                                                                                                                                                                                                                                                                // Retrieves the vertical scale of the display object.
+			[[nodiscard]] double           GetZScale() const;                                                                                                                                                                                                                                                                // Retrieves the scale of the object along the Z axis.
+			[[nodiscard]] bool             IsFlagSet(Flag a_flag) const;                                                                                                                                                                                                                                                     // Determines if a property of the DisplayInfo object is set
 			void             Initialize(Flag a_varsSet, double a_x, double a_y, double a_rotation, double a_xScale, double a_yScale, double a_alpha, bool a_visible, double a_z, double a_xRotation, double a_yRotation, double a_zScale, double a_fov, const GMatrix3D* a_viewM, const GMatrix3D* a_perspM);  // Initializes the display properties of a display object.
 			void             SetVisible(bool a_visible);                                                                                                                                                                                                                                                       // Sets the visibility of the display object.
 			void             SetPerspectiveMatrix3D(const GMatrix3D* a_mat);                                                                                                                                                                                                                                   // Sets the erspective matrix for a 3D movie clip.
@@ -311,24 +311,24 @@ namespace RE
 
 		bool operator==(const GFxValue& a_rhs) const;
 
-		GString ToString() const;
+		[[nodiscard]] GString ToString() const;
 
-		ValueType      GetType() const;
-		bool           IsUndefined() const;
-		bool           IsNull() const;
-		bool           IsBool() const;
-		bool           IsNumber() const;
-		bool           IsString() const;
-		bool           IsStringW() const;
-		bool           IsObject() const;
-		bool           IsArray() const;
-		bool           IsDisplayObject() const;
-		bool           GetBool() const;
-		double         GetNumber() const;
-		std::ptrdiff_t GetSInt() const;
-		std::size_t    GetUInt() const;
-		const char*    GetString() const;
-		const wchar_t* GetStringW() const;
+		[[nodiscard]] ValueType      GetType() const;
+		[[nodiscard]] bool           IsUndefined() const;
+		[[nodiscard]] bool           IsNull() const;
+		[[nodiscard]] bool           IsBool() const;
+		[[nodiscard]] bool           IsNumber() const;
+		[[nodiscard]] bool           IsString() const;
+		[[nodiscard]] bool           IsStringW() const;
+		[[nodiscard]] bool           IsObject() const;
+		[[nodiscard]] bool           IsArray() const;
+		[[nodiscard]] bool           IsDisplayObject() const;
+		[[nodiscard]] bool           GetBool() const;
+		[[nodiscard]] double         GetNumber() const;
+		[[nodiscard]] std::ptrdiff_t GetSInt() const;
+		[[nodiscard]] std::size_t    GetUInt() const;
+		[[nodiscard]] const char*    GetString() const;
+		[[nodiscard]] const wchar_t* GetStringW() const;
 
 		void SetUndefined();
 		void SetNull();
@@ -365,7 +365,7 @@ namespace RE
 		}
 
 		// AS Array support. Valid for Array type
-		std::uint32_t GetArraySize() const;
+		[[nodiscard]] std::uint32_t GetArraySize() const;
 		bool          SetArraySize(std::uint32_t a_size);
 		bool          GetElement(std::uint32_t a_idx, GFxValue* a_val) const;
 		bool          SetElement(std::uint32_t a_idx, const GFxValue& a_val);
@@ -390,7 +390,7 @@ namespace RE
 		GFC_MEMORY_REDEFINE_NEW(GFxValue, GStatGroups::kGStatGroup_Default);
 
 	protected:
-		bool IsManagedValue() const;
+		[[nodiscard]] bool IsManagedValue() const;
 		void AcquireManagedValue(const GFxValue& a_rhs);
 		void ReleaseManagedValue();
 		void ChangeType(ValueType a_type);

@@ -15,7 +15,7 @@ namespace RE
 		virtual ~BSExtraData() = default;  // 00
 
 		// add
-		virtual ExtraDataType GetType() const = 0;                         // 01
+		[[nodiscard]] virtual ExtraDataType GetType() const = 0;                         // 01
 		virtual bool          IsNotEqual(const BSExtraData* a_rhs) const;  // 02 - { return false; }
 
 		static BSExtraData* Create(std::size_t a_size, std::uintptr_t a_vtbl);

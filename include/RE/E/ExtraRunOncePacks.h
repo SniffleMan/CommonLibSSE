@@ -25,7 +25,7 @@ namespace RE
 		~ExtraRunOncePacks() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRunOncePacks; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRunOncePacks; }
 
 		// members
 		BSSimpleList<RunOncePackage*>* packages;  // 10

@@ -27,7 +27,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		// add
-		virtual BGSEquipSlot* GetEquipSlot() const;                // 04 - { return equipSlot; }
+		[[nodiscard]] virtual BGSEquipSlot* GetEquipSlot() const;                // 04 - { return equipSlot; }
 		virtual void          SetEquipSlot(BGSEquipSlot* a_slot);  // 05 - { equipSlot = a_slot; }
 
 		// members

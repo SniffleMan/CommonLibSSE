@@ -40,7 +40,7 @@ namespace RE
 		};
 		static_assert(sizeof(Teaches) == 0x8);
 
-		Flag GetSanitizedType() const;
+		[[nodiscard]] Flag GetSanitizedType() const;
 
 		// members
 		stl::enumeration<Flag, std::uint8_t> flags;    // 00
@@ -99,15 +99,15 @@ namespace RE
 		bool GetActivateText(TESObjectREFR* a_activator, BSString& a_dst) override;                                                                                    // 4D
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
-		bool       TeachesSkill() const;
-		bool       TeachesSpell() const;
-		bool       IsRead() const;
-		bool       CanBeTaken() const;
-		bool       IsBookTome() const;
-		bool       IsNoteScroll() const;
-		ActorValue GetSkill() const;
+		[[nodiscard]] bool       TeachesSkill() const;
+		[[nodiscard]] bool       TeachesSpell() const;
+		[[nodiscard]] bool       IsRead() const;
+		[[nodiscard]] bool       CanBeTaken() const;
+		[[nodiscard]] bool       IsBookTome() const;
+		[[nodiscard]] bool       IsNoteScroll() const;
+		[[nodiscard]] ActorValue GetSkill() const;
 		SpellItem* GetSpell();
 
 		// members

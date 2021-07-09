@@ -41,7 +41,7 @@ namespace SKSE
 			bool                               apiInit{ false };
 
 			template <class T>
-			RE::BSTEventSource<T>* GetEventDispatcher(MessagingInterface::Dispatcher a_id) const
+			[[nodiscard]] RE::BSTEventSource<T>* GetEventDispatcher(MessagingInterface::Dispatcher a_id) const
 			{
 				assert(messagingInterface);
 				return static_cast<RE::BSTEventSource<T>*>(messagingInterface->GetEventDispatcher(a_id));

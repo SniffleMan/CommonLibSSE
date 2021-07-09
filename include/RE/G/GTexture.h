@@ -77,9 +77,9 @@ namespace RE
 		virtual void         Update(std::int32_t a_level, std::int32_t a_num, const UpdateRect* a_rects, const GImageBase* a_im) = 0;                                           // 03
 		virtual std::int32_t Map(std::int32_t a_level, std::int32_t a_num, MapRect* a_maps, MapFlags a_flags = MapFlags::kNone) = 0;                                            // 04
 		virtual bool         Unmap(std::int32_t a_level, std::int32_t a_num, MapRect* a_maps, MapFlags a_flags = MapFlags::kNone) = 0;                                          // 05
-		virtual GRenderer*   GetRenderer() const = 0;                                                                                                                           // 06
-		virtual bool         IsDataValid() const = 0;                                                                                                                           // 07
-		virtual Handle       GetUserData() const = 0;                                                                                                                           // 08
+		[[nodiscard]] virtual GRenderer*   GetRenderer() const = 0;                                                                                                                           // 06
+		[[nodiscard]] virtual bool         IsDataValid() const = 0;                                                                                                                           // 07
+		[[nodiscard]] virtual Handle       GetUserData() const = 0;                                                                                                                           // 08
 		virtual void         SetUserData(Handle a_data) = 0;                                                                                                                    // 09
 		virtual void         AddChangeHandler(ChangeHandler* a_handler) = 0;                                                                                                    // 0A
 		virtual void         RemoveChangeHandler(ChangeHandler* a_handler) = 0;                                                                                                 // 0B

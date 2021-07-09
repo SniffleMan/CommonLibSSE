@@ -27,7 +27,7 @@ namespace RE
 		};
 
 		LOCK_LEVEL     GetLockLevel(const TESObjectREFR* a_containerRef) const;
-		constexpr bool IsLocked() const noexcept { return flags.all(Flag::kLocked); }
+		[[nodiscard]] constexpr bool IsLocked() const noexcept { return flags.all(Flag::kLocked); }
 		void           SetLocked(bool a_locked);
 
 		// members

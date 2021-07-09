@@ -17,7 +17,7 @@ namespace RE
 		~ExtraRoom() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRoom; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRoom; }
 
 		// members
 		NiPointer<BSMultiBoundRoom> room;  // 10

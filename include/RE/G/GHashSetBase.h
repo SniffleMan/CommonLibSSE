@@ -63,7 +63,7 @@ namespace RE
 				return !(*this == a_it);
 			}
 
-			bool IsEnd() const
+			[[nodiscard]] bool IsEnd() const
 			{
 				return (!hash) || (!hash->table) || (index > (SPInt)hash->table->sizeMask);
 			}
@@ -232,7 +232,7 @@ namespace RE
 			}
 		}
 
-		bool IsEmpty() const
+		[[nodiscard]] bool IsEmpty() const
 		{
 			return !table || table->entryCount == 0;
 		}
@@ -367,7 +367,7 @@ namespace RE
 			}
 		}
 
-		UPInt GetSize() const
+		[[nodiscard]] UPInt GetSize() const
 		{
 			return table ? 0 : (UPInt)table->entryCount;
 		}

@@ -19,7 +19,7 @@ namespace RE
 		~ExtraRefrPath() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRefrPath; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRefrPath; }
 
 		// members
 		NiPoint3                                   startPos;          // 10

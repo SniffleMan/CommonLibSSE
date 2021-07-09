@@ -16,7 +16,7 @@ namespace RE
 		~ExtraSeenData() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kSeenData; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kSeenData; }
 
 		// members
 		SeenData* seenData;  // 10

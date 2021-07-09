@@ -15,7 +15,7 @@ namespace RE
 		~ExtraHeadingTarget() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kHeadingTarget; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kHeadingTarget; }
 
 		// members
 		ObjectRefHandle target;  // 10

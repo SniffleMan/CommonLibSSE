@@ -30,7 +30,7 @@ namespace RE
 		void InitImpl() override;                                         // 55
 
 		// override (BGSKeywordForm)
-		BGSKeyword* GetDefaultKeyword() const override;  // 05
+		[[nodiscard]] BGSKeyword* GetDefaultKeyword() const override;  // 05
 
 		[[nodiscard]] constexpr SOUL_LEVEL GetContainedSoul() const noexcept { return *currentSoul; }
 		[[nodiscard]] constexpr SOUL_LEVEL GetMaximumCapacity() const noexcept { return *soulCapacity; }

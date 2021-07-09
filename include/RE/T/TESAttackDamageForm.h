@@ -17,7 +17,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent* a_rhs) override;  // 03
 
 		// add
-		virtual std::uint16_t GetAttackDamage() const;  // 04 - { return attackDamage; }
+		[[nodiscard]] virtual std::uint16_t GetAttackDamage() const;  // 04 - { return attackDamage; }
 
 		// members
 		std::uint16_t attackDamage;  // 08

@@ -61,16 +61,16 @@ namespace RE
 		virtual void             Attach();                                         // 26 - { return; }
 		virtual void             Detach();                                         // 27 - { return; }
 		virtual bool             Update(float a_arg1);                             // 28
-		virtual NiAVObject*      Get3D() const;                                    // 29 - { return 0; }
-		virtual bool             GetManagerHandlesSaveLoad() const;                // 2A - { return true; }
-		virtual bool             GetClearWhenCellIsUnloaded() const;               // 2B - { return true; }
-		virtual TEMP_EFFECT_TYPE GetType() const;                                  // 2C - { return 7; }
+		[[nodiscard]] virtual NiAVObject*      Get3D() const;                                    // 29 - { return 0; }
+		[[nodiscard]] virtual bool             GetManagerHandlesSaveLoad() const;                // 2A - { return true; }
+		[[nodiscard]] virtual bool             GetClearWhenCellIsUnloaded() const;               // 2B - { return true; }
+		[[nodiscard]] virtual TEMP_EFFECT_TYPE GetType() const;                                  // 2C - { return 7; }
 		virtual void             SaveGame(BGSSaveGameBuffer* a_buf);               // 2D
 		virtual void             LoadGame(BGSLoadGameBuffer* a_buf);               // 2E
 		virtual void             FinishLoadGame(BGSLoadGameBuffer* a_buf);         // 2F - { return; }
-		virtual bool             IsInterfaceEffect() const;                        // 30 - { return false; }
+		[[nodiscard]] virtual bool             IsInterfaceEffect() const;                        // 30 - { return false; }
 		virtual void             SetInterfaceEffect(bool a_set);                   // 31 - { return; }
-		virtual bool             GetStackable() const;                             // 32 - { return false; }
+		[[nodiscard]] virtual bool             GetStackable() const;                             // 32 - { return false; }
 		virtual bool             GetStackableMatch(BSTempEffect* a_effect) const;  // 33 - { return false; }
 		virtual void             Push();                                           // 34 - { return; }
 		virtual void             Pop();                                            // 35 - { return; }

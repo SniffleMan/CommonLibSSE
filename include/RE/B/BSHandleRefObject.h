@@ -19,8 +19,8 @@ namespace RE
 
 		void          DecRefCount();
 		void          IncRefCount();
-		bool          IsHandleValid() const;
-		std::uint32_t QRefCount() const;
+		[[nodiscard]] bool          IsHandleValid() const;
+		[[nodiscard]] std::uint32_t QRefCount() const;
 	};
 	static_assert(sizeof(BSHandleRefObject) == 0x10);
 }

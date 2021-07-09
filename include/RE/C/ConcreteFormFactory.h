@@ -17,7 +17,7 @@ namespace RE
 
 	public:
 		const char* GetFormName() const override;  // 02 - { return _name; }
-		FormType    GetFormType() const override;  // 03 - { return FORM_TYPE; }
+		[[nodiscard]] FormType    GetFormType() const override;  // 03 - { return FORM_TYPE; }
 
 		inline T* Create()
 		{

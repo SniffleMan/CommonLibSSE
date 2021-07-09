@@ -14,7 +14,7 @@ namespace RE
 		~ExtraRefractionProperty() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kRefractionProperty; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRefractionProperty; }
 
 		// members
 		float         refractionPower;  // 10

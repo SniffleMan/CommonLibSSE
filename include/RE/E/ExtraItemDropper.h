@@ -15,7 +15,7 @@ namespace RE
 		~ExtraItemDropper() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kItemDropper; }
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kItemDropper; }
 
 		// members
 		ObjectRefHandle dropper;  // 10

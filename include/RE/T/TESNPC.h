@@ -189,7 +189,7 @@ namespace RE
 		struct Layer
 		{
 		public:
-			float GetInterpolationValue() const;
+			[[nodiscard]] float GetInterpolationValue() const;
 
 			// members
 			Color         tintColor;           // 00 - TINC
@@ -235,16 +235,16 @@ namespace RE
 		BSEventNotifyControl ProcessEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_eventSource) override;  // 01
 
 		void          ChangeHeadPart(BGSHeadPart* a_target);
-		BGSHeadPart** GetBaseOverlays() const;
+		[[nodiscard]] BGSHeadPart** GetBaseOverlays() const;
 		BGSHeadPart*  GetCurrentHeadPartByType(HeadPartType a_type);
 		BGSHeadPart*  GetHeadPartByType(HeadPartType a_type);
 		BGSHeadPart*  GetHeadPartOverlayByType(HeadPartType a_type);
-		float         GetHeight() const;
-		std::uint32_t GetNumBaseOverlays() const;
+		[[nodiscard]] float         GetHeight() const;
+		[[nodiscard]] std::uint32_t GetNumBaseOverlays() const;
 		TESRace*      GetRace();
 		TESNPC*       GetRootFaceNPC();
-		const TESNPC* GetRootFaceNPC() const;
-		SEX           GetSex() const;
+		[[nodiscard]] const TESNPC* GetRootFaceNPC() const;
+		[[nodiscard]] SEX           GetSex() const;
 		bool          HasOverlays();
 		void          SetFaceTexture(BGSTextureSet* a_textureSet);
 		void          SetHairColor(BGSColorForm* a_hairColor);

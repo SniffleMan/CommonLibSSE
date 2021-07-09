@@ -41,7 +41,7 @@ namespace RE
 					kSetOnObject = 1 << 0
 				};
 
-				BSFixedString GetUserFlag() const;
+				[[nodiscard]] BSFixedString GetUserFlag() const;
 
 				// members
 				std::uintptr_t data;  // 0
@@ -111,7 +111,7 @@ namespace RE
 
 				[[nodiscard]] constexpr std::uint32_t GetNumFuncs() const noexcept { return memberFunctionCount; }
 				Func*                                 GetFuncIter();
-				const Func*                           GetFuncIter() const;
+				[[nodiscard]] const Func*                           GetFuncIter() const;
 
 				// members
 				BSFixedString name;                     // 00

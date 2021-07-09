@@ -47,7 +47,7 @@ namespace RE
 		void InitItemImpl() override;        // 13
 
 		// override (TESIcon)
-		const char* GetDefaultPath() const override;  // 06 - { return "Textures\\"; }
+		[[nodiscard]] const char* GetDefaultPath() const override;  // 06 - { return "Textures\\"; }
 
 		// members
 		const char*           enumName;      // 050

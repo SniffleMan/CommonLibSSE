@@ -16,7 +16,7 @@ namespace RE
 		~ExtraPromotedRef() override;  // 00
 
 		// override (BSExtraData)
-		ExtraDataType GetType() const override;  // 01 - { return kPromotedRef };
+		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kPromotedRef };
 
 		// members
 		BSTArray<TESForm*> promotedRefOwners;  // 10
